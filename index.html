@@ -3,11 +3,327 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Team Gabay portfolio for IT0043/L Web Design with Client-Side Scripting." />
+    <meta
+      name="description"
+      content="Team Gabay portfolio for IT0043/L Web Design with Client-Side Scripting."
+    />
     <title>Team Gabay Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Animated background layer stays behind the whole website. -->
+    <div class="background" aria-hidden="true">
+      <div class="motion-orb orb orb-a"></div>
+      <div class="motion-orb orb orb-b"></div>
+      <div class="motion-orb orb orb-c"></div>
+      <div class="motion-orb orb orb-d"></div>
+      <div class="motion-orb orb orb-e"></div>
+      <div class="dot-grid"></div>
+      <div class="vignette"></div>
+    </div>
+
+    <div class="site-wrapper">
+      <!-- Fixed navbar. JavaScript adds the glass effect after scrolling. -->
+      <header class="navbar" id="navbar">
+        <nav class="nav-inner">
+          <button class="logo-button" type="button" data-target="home" aria-label="Go to home">
+            <svg width="62" height="46" viewBox="0 0 62 46" aria-label="Team Gabay logo">
+              <defs>
+                <linearGradient id="tg-gradient" x1="0" x2="62" y1="0" y2="0">
+                  <stop offset="0%" stop-color="#a855f7" />
+                  <stop offset="52%" stop-color="#818cf8" />
+                  <stop offset="100%" stop-color="#38bdf8" />
+                </linearGradient>
+                <filter id="tg-glow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="2.5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <text
+                x="0"
+                y="34"
+                fill="url(#tg-gradient)"
+                filter="url(#tg-glow)"
+                font-family="Space Grotesk, sans-serif"
+                font-size="40"
+                font-weight="900"
+                letter-spacing="-3"
+              >
+                TG
+              </text>
+              <rect x="0" y="40" width="54" height="4" rx="2" fill="url(#tg-gradient)" />
+              <circle cx="56" cy="42" r="2" fill="#a78bfa" />
+              <circle cx="61" cy="42" r="2" fill="#38bdf8" />
+            </svg>
+          </button>
+
+          <div class="desktop-links">
+            <button type="button" class="nav-link" data-target="home">Home</button>
+            <button type="button" class="nav-link" data-target="about">About</button>
+            <button type="button" class="nav-link" data-target="projects">Projects</button>
+            <button type="button" class="nav-link" data-target="contact">Contact</button>
+          </div>
+
+          <button class="menu-button" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </button>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <button type="button" class="mobile-link" data-target="home">Home</button>
+          <button type="button" class="mobile-link" data-target="about">About</button>
+          <button type="button" class="mobile-link" data-target="projects">Projects</button>
+          <button type="button" class="mobile-link" data-target="contact">Contact</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-content reveal-now">
+            <p class="course-label">IT0043/L - Web Design &amp; Client-Side Scripting</p>
+            <h1><span>Team </span><span class="violet-text">Gabay</span></h1>
+            <div class="typewriter">
+              <span id="typewriterText">Programmers &amp; Designers</span>
+              <span class="cursor" id="typewriterCursor"></span>
+            </div>
+            <p class="tagline">
+              We design and build web experiences that are fast, accessible, and intentional - combining strong
+              visual craft with clean, maintainable code.
+            </p>
+            <div class="hero-buttons">
+              <button type="button" class="primary-button" data-target="projects">View Projects</button>
+              <button type="button" class="ghost-button" data-target="about">Meet the Team</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal-section" id="about">
+          <div class="section-inner">
+            <div class="section-title">
+              <p>Who We Are</p>
+              <h2>Meet the Team</h2>
+            </div>
+
+            <div class="member-grid">
+              <article class="glass-card member-card">
+                <div class="member-head">
+                  <div class="avatar">JC</div>
+                  <div>
+                    <h3>John Rolly A. Calipusan</h3>
+                    <p class="member-role violet-text">Lead Programmer &amp; Designer</p>
+                  </div>
+                </div>
+                <p>
+                  Enjoys turning layouts into working pages and making sure the design still looks good once it
+                  becomes code. Handles most of the programming and visual direction for Team Gabay.
+                </p>
+              </article>
+
+              <article class="glass-card member-card">
+                <div class="member-head">
+                  <div class="avatar blue-avatar">JA</div>
+                  <div>
+                    <h3>James Enrico Anore</h3>
+                    <p class="member-role blue-text">Team Leader</p>
+                  </div>
+                </div>
+                <p>
+                  Helps organize the team's tasks, checks the flow of each page, and keeps the group focused on
+                  finishing work that is clear, useful, and ready for class submission.
+                </p>
+              </article>
+            </div>
+
+            <div class="about-grid">
+              <article class="glass-card skills-card">
+                <h3>Our Skills</h3>
+
+                <div class="skill-group violet-group">
+                  <div class="skill-divider"><span></span><strong>Frontend</strong><span></span></div>
+                  <div class="skill-pills">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                  </div>
+                </div>
+
+                <div class="skill-group blue-group">
+                  <div class="skill-divider"><span></span><strong>Programming</strong><span></span></div>
+                  <div class="skill-pills">
+                    <span>C++</span>
+                    <span>C</span>
+                    <span>Python</span>
+                  </div>
+                </div>
+
+                <div class="skill-group green-group">
+                  <div class="skill-divider"><span></span><strong>Data &amp; Design</strong><span></span></div>
+                  <div class="skill-pills">
+                    <span>Basic SQL</span>
+                    <span>Figma</span>
+                  </div>
+                </div>
+              </article>
+
+              <div class="stacked-cards">
+                <article class="glass-card">
+                  <h3>Our Philosophy</h3>
+                  <p>
+                    We believe that good design is more than aesthetics - it is about creating experiences that
+                    feel natural and work for everyone. Even as beginners, we approach every project with care and
+                    curiosity.
+                  </p>
+                  <p>
+                    We are still learning and improving, so we keep our designs simple, readable, and responsive
+                    before adding extra effects.
+                  </p>
+                </article>
+
+                <article class="glass-card">
+                  <h3>Course Info</h3>
+                  <p>Subject: Web Design with Client-Side Scripting (IT0043/L)</p>
+                  <p>Instructor: John Benedic R. Enriquez</p>
+                  <p>Year &amp; Term: 1st Year - 3rd Term</p>
+                  <p>Semester: 2025-2026</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal-section" id="projects">
+          <div class="section-inner">
+            <div class="section-title">
+              <h2>Our <span class="gradient-title">Projects</span></h2>
+              <p>A collection of our work from this semester</p>
+            </div>
+
+            <div class="project-grid">
+              <article class="glass-card project-card">
+                <div class="project-preview sugar-preview">
+                  <div class="mock-window">
+                    <div class="mock-dots"><span></span><span></span><span></span></div>
+                    <div class="sugar-layout">
+                      <div>
+                        <div class="mock-line short"></div>
+                        <div class="mock-line"></div>
+                        <div class="mock-boxes"><span></span><span></span></div>
+                      </div>
+                      <div class="score-circle">72</div>
+                    </div>
+                  </div>
+                  <strong>Asukal Check</strong>
+                </div>
+                <div class="project-body">
+                  <h3>Asukal Check</h3>
+                  <p>A Figma prototype for checking sugar-related product information with clear navigation and simple screens.</p>
+                  <div class="tag-row"><span>Figma</span><span>UI Prototype</span><span>Design</span></div>
+                  <a class="project-link" href="https://five-ruler-95982750.figma.site/" target="_blank" rel="noreferrer">
+                    View Prototype
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <article class="glass-card project-card">
+                <div class="project-preview task-preview">
+                  <div class="mock-window">
+                    <div class="mock-dots"><span></span><span></span><span></span></div>
+                    <div class="task-columns">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <strong>Campus Task Board</strong>
+                </div>
+                <div class="project-body">
+                  <h3>Campus Task Board</h3>
+                  <p>Placeholder project: a responsive task tracker mockup for students managing school activities.</p>
+                  <div class="tag-row"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+                  <p class="coming-soon">Coming Soon</p>
+                </div>
+              </article>
+
+              <article class="glass-card project-card">
+                <div class="project-preview recipe-preview">
+                  <div class="mock-window">
+                    <div class="mock-dots"><span></span><span></span><span></span></div>
+                    <div class="recipe-layout">
+                      <span></span>
+                      <div><i></i><i></i><b></b><b></b></div>
+                    </div>
+                  </div>
+                  <strong>Simple Recipe Finder</strong>
+                </div>
+                <div class="project-body">
+                  <h3>Simple Recipe Finder</h3>
+                  <p>Placeholder project: a JavaScript practice app for browsing recipe cards and filtering by category.</p>
+                  <div class="tag-row"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+                  <p class="coming-soon">Coming Soon</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal-section" id="contact">
+          <div class="section-inner contact-inner">
+            <div class="section-title">
+              <h2>Get In <span class="gradient-title">Touch</span></h2>
+            </div>
+
+            <div class="contact-grid">
+              <article class="glass-card contact-info">
+                <h3>Contact Info</h3>
+                <p>Feel free to reach out to us through the form or any of the channels below.</p>
+                <a class="email-line" href="mailto:jacalipusan@fit.edu.ph">
+                  <span>@</span>
+                  jacalipusan@fit.edu.ph
+                </a>
+                <div class="contact-actions">
+                  <a href="https://github.com/YuukiHideaki" target="_blank" rel="noreferrer">GitHub</a>
+                  <a href="mailto:jacalipusan@fit.edu.ph">Email Us</a>
+                </div>
+              </article>
+
+              <form class="glass-card contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+                  <p class="field-error" id="nameError"></p>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="your.email@example.com" autocomplete="email" />
+                  <p class="field-error" id="emailError"></p>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Write a short message"></textarea>
+                  <p class="field-error" id="messageError"></p>
+                  <p class="field-help">This demo form shows validation and success feedback for the final project.</p>
+                </div>
+
+                <button class="submit-button" id="submitButton" type="submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2026 Team Gabay - John Rolly A. Calipusan &amp; James Enrico Anore. IT0043/L Final Project.</p>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="script.js"></script>
   </body>
 </html>
