@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Team Gabay: background, skills, and web design journey."
+    />
+    <title>About - Team Gabay Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="about">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <div class="background" aria-hidden="true">
+      <div class="motion-orb orb orb-a"></div>
+      <div class="motion-orb orb orb-b"></div>
+      <div class="motion-orb orb orb-c"></div>
+      <div class="motion-orb orb orb-d"></div>
+      <div class="motion-orb orb orb-e"></div>
+      <div class="dot-grid"></div>
+      <div class="vignette"></div>
+    </div>
+
+    <div class="site-wrapper">
+      <header class="navbar" id="navbar">
+        <nav class="nav-inner">
+          <button class="logo-button" type="button" data-href="index.html#home" aria-label="Go to home">
+            <svg width="62" height="46" viewBox="0 0 62 46" aria-label="Team Gabay logo">
+              <defs>
+                <linearGradient id="tg-gradient" x1="0" x2="62" y1="0" y2="0">
+                  <stop offset="0%" stop-color="#a855f7" />
+                  <stop offset="52%" stop-color="#818cf8" />
+                  <stop offset="100%" stop-color="#38bdf8" />
+                </linearGradient>
+                <filter id="tg-glow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="2.5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <text
+                x="0"
+                y="34"
+                fill="url(#tg-gradient)"
+                filter="url(#tg-glow)"
+                font-family="Space Grotesk, sans-serif"
+                font-size="40"
+                font-weight="900"
+                letter-spacing="-3"
+              >
+                TG
+              </text>
+              <rect x="0" y="40" width="54" height="4" rx="2" fill="url(#tg-gradient)" />
+              <circle cx="56" cy="42" r="2" fill="#a78bfa" />
+              <circle cx="61" cy="42" r="2" fill="#38bdf8" />
+            </svg>
+          </button>
+
+          <div class="desktop-links">
+            <button type="button" class="nav-link" data-href="index.html#home">Home</button>
+            <button type="button" class="nav-link" data-target="about">About</button>
+            <button type="button" class="nav-link" data-href="projects.html">Projects</button>
+            <button type="button" class="nav-link" data-href="contact.html">Contact</button>
+          </div>
+
+          <button class="menu-button" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </button>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <button type="button" class="mobile-link" data-href="index.html#home">Home</button>
+          <button type="button" class="mobile-link" data-target="about">About</button>
+          <button type="button" class="mobile-link" data-href="projects.html">Projects</button>
+          <button type="button" class="mobile-link" data-href="contact.html">Contact</button>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="projects-hero reveal-now" id="about">
+          <div class="section-inner projects-hero-grid">
+            <div class="projects-hero-copy">
+              <h1>About <span class="gradient-title">Team Gabay</span></h1>
+              <p>
+                We are first-year IT students building our foundation in web design, client-side scripting, and
+                practical front-end workflows.
+              </p>
+              <div class="hero-buttons">
+                <button type="button" class="primary-button" data-href="projects.html">See Projects</button>
+                <button type="button" class="ghost-button" data-href="contact.html">Contact Us</button>
+              </div>
+            </div>
+
+            <aside class="glass-card roadmap-compass" aria-label="Team journey overview">
+              <div class="compass-ring">
+                <span>02</span>
+                <strong>Members</strong>
+              </div>
+              <div class="compass-copy">
+                <h2>Journey</h2>
+                <p>Learning web design by planning, prototyping, coding, testing, and presenting real class projects.</p>
+              </div>
+              <div class="roadmap-mini-stats" aria-label="Team focus areas">
+                <span>Design</span>
+                <span>Code</span>
+                <span>Review</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section reveal-section" id="background">
+          <div class="section-inner">
+            <div class="section-title">
+              <p>Background</p>
+              <h2>Who we are</h2>
+            </div>
+
+            <div class="member-grid">
+              <article class="glass-card member-card">
+                <div class="member-head">
+                  <div class="avatar">JC</div>
+                  <div>
+                    <h3>John Rolly A. Calipusan</h3>
+                    <p class="member-role violet-text">Lead Programmer &amp; Designer</p>
+                  </div>
+                </div>
+                <p>
+                  Enjoys turning layouts into working pages and making sure the design still looks good once it
+                  becomes code. Handles most of the programming and visual direction for Team Gabay.
+                </p>
+                <div class="member-tags"><span>UI Design</span><span>Frontend</span><span>Prototype Polish</span><span>Responsive Layout</span><span>JavaScript</span></div>
+              </article>
+
+              <article class="glass-card member-card">
+                <div class="member-head">
+                  <div class="avatar blue-avatar">JA</div>
+                  <div>
+                    <h3>James Enrico Anore</h3>
+                    <p class="member-role blue-text">Team Leader</p>
+                  </div>
+                </div>
+                <p>
+                  Helps organize the team's tasks, checks the flow of each page, and keeps the group focused on
+                  finishing work that is clear, useful, and ready for class submission.
+                </p>
+                <div class="member-tags"><span>Planning</span><span>Review</span><span>Team Flow</span></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal-section" id="skills">
+          <div class="section-inner">
+            <div class="about-grid">
+              <article class="glass-card skills-card">
+                <h3>Our Skills</h3>
+
+                <div class="skill-group violet-group">
+                  <div class="skill-divider"><span></span><strong>Frontend</strong><span></span></div>
+                  <div class="skill-pills">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                  </div>
+                </div>
+
+                <div class="skill-group blue-group">
+                  <div class="skill-divider"><span></span><strong>Programming</strong><span></span></div>
+                  <div class="skill-pills">
+                    <span>C++</span>
+                    <span>C</span>
+                    <span>Python</span>
+                  </div>
+                </div>
+
+                <div class="skill-group green-group">
+                  <div class="skill-divider"><span></span><strong>Data &amp; Design</strong><span></span></div>
+                  <div class="skill-pills">
+                    <span>Basic SQL</span>
+                    <span>Figma</span>
+                  </div>
+                </div>
+
+                <div class="skill-group cyan-group">
+                  <div class="skill-divider"><span></span><strong>Workflow</strong><span></span></div>
+                  <div class="skill-pills">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                  </div>
+                </div>
+              </article>
+
+              <div class="stacked-cards">
+                <article class="glass-card">
+                  <h3>Professional Journey</h3>
+                  <p>
+                    Our journey started with class activities in HTML, CSS, JavaScript, and design planning. From
+                    there, we began creating portfolio pages and prototypes that connect design ideas to working code.
+                  </p>
+                  <p>
+                    We are building toward front-end development and UI design roles by practicing responsive layouts,
+                    cleaner code, project presentation, and user-focused decisions.
+                  </p>
+                </article>
+
+                <article class="glass-card">
+                  <h3>Course Info</h3>
+                  <p>Subject: Web Design with Client-Side Scripting (IT0043/L)</p>
+                  <p>Instructor: John Benedic R. Enriquez</p>
+                  <p>Year &amp; Term: 1st Year - 3rd Term</p>
+                  <p>Semester: 2025-2026</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2026 Team Gabay - John Rolly A. Calipusan &amp; James Enrico Anore. IT0043/L Final Project.</p>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

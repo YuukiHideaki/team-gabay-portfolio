@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Team Gabay portfolio for IT0043/L Web Design with Client-Side Scripting."
+      content="Contact Team Gabay for project inquiries, feedback, or collaboration."
     />
-    <title>Team Gabay Portfolio</title>
+    <title>Contact - Team Gabay Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body data-page="home">
+  <body data-page="contact">
     <a class="skip-link" href="#main">Skip to main content</a>
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-    <!-- Animated background layer stays behind the whole website. -->
     <div class="background" aria-hidden="true">
       <div class="motion-orb orb orb-a"></div>
       <div class="motion-orb orb orb-b"></div>
@@ -26,10 +25,9 @@
     </div>
 
     <div class="site-wrapper">
-      <!-- Fixed navbar. JavaScript adds the glass effect after scrolling. -->
       <header class="navbar" id="navbar">
         <nav class="nav-inner">
-          <button class="logo-button" type="button" data-target="home" aria-label="Go to home">
+          <button class="logo-button" type="button" data-href="index.html#home" aria-label="Go to home">
             <svg width="62" height="46" viewBox="0 0 62 46" aria-label="Team Gabay logo">
               <defs>
                 <linearGradient id="tg-gradient" x1="0" x2="62" y1="0" y2="0">
@@ -64,10 +62,10 @@
           </button>
 
           <div class="desktop-links">
-            <button type="button" class="nav-link" data-target="home">Home</button>
+            <button type="button" class="nav-link" data-href="index.html#home">Home</button>
             <button type="button" class="nav-link" data-href="about.html">About</button>
             <button type="button" class="nav-link" data-href="projects.html">Projects</button>
-            <button type="button" class="nav-link" data-href="contact.html">Contact</button>
+            <button type="button" class="nav-link" data-target="contact">Contact</button>
           </div>
 
           <button class="menu-button" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
@@ -78,68 +76,63 @@
         </nav>
 
         <div class="mobile-menu" id="mobileMenu">
-          <button type="button" class="mobile-link" data-target="home">Home</button>
+          <button type="button" class="mobile-link" data-href="index.html#home">Home</button>
           <button type="button" class="mobile-link" data-href="about.html">About</button>
           <button type="button" class="mobile-link" data-href="projects.html">Projects</button>
-          <button type="button" class="mobile-link" data-href="contact.html">Contact</button>
+          <button type="button" class="mobile-link" data-target="contact">Contact</button>
         </div>
       </header>
 
       <main id="main">
-        <section class="hero" id="home">
-          <div class="hero-inner">
-            <div class="hero-content reveal-now">
-              <p class="course-label">IT0043/L - Web Design &amp; Client-Side Scripting</p>
-              <h1><span>Team </span><span class="violet-text">Gabay</span></h1>
-              <div class="typewriter">
-                <span id="typewriterText">Programmers &amp; Designers</span>
-                <span class="cursor" id="typewriterCursor"></span>
-              </div>
-              <p class="tagline">
-                We are Team Gabay, student web designers and developers who create clean, responsive, and useful
-                interfaces with a balance of visual craft and maintainable code.
-              </p>
-              <div class="hero-buttons">
-                <button type="button" class="primary-button" data-href="projects.html">View Projects</button>
-                <button type="button" class="ghost-button" data-href="about.html">Meet the Team</button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section reveal-section home-philosophy-section" id="philosophy">
-          <div class="section-inner">
+        <section class="section reveal-section contact-page-section" id="contact">
+          <div class="section-inner contact-inner">
             <div class="section-title">
-              <p>Design Philosophy</p>
-              <h2>Simple, readable, and built with purpose</h2>
+              <p>Contact</p>
+              <h1>Get In <span class="gradient-title">Touch</span></h1>
+              <span>Questions, feedback, and collaboration messages are welcome.</span>
             </div>
 
-            <div class="home-philosophy-grid">
-              <article class="glass-card philosophy-card">
-                <span>01</span>
-                <h3>Design for clarity</h3>
-                <p>
-                  Every page should be easy to scan, easy to navigate, and direct about what the visitor can do next.
-                </p>
+            <div class="contact-grid">
+              <article class="glass-card contact-info">
+                <h3>Contact Info</h3>
+                <p>Potential clients, classmates, and instructors can reach us through the form or the direct channels below.</p>
+                <div class="email-list" aria-label="Team email addresses">
+                  <a class="email-line" href="mailto:jacalipusan@fit.edu.ph">
+                    <span>@</span>
+                    jacalipusan@fit.edu.ph
+                  </a>
+                  <a class="email-line" href="mailto:jaanore@fit.edu.ph">
+                    <span>@</span>
+                    jaanore@fit.edu.ph
+                  </a>
+                </div>
+                <div class="contact-actions">
+                  <a href="https://github.com/YuukiHideaki" target="_blank" rel="noreferrer">GitHub</a>
+                  <a href="mailto:jacalipusan@fit.edu.ph,jaanore@fit.edu.ph">Email Us</a>
+                </div>
               </article>
 
-              <article class="glass-card philosophy-card">
-                <span>02</span>
-                <h3>Make it responsive</h3>
-                <p>
-                  We start with strong structure, then adjust spacing, type, and layout so the experience works on
-                  both phones and desktop screens.
-                </p>
-              </article>
+              <form class="glass-card contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+                  <p class="field-error" id="nameError"></p>
+                </div>
 
-              <article class="glass-card philosophy-card">
-                <span>03</span>
-                <h3>Keep learning</h3>
-                <p>
-                  Our work reflects a student team still growing: prototype first, test the flow, polish the details,
-                  and improve with every build.
-                </p>
-              </article>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="your.email@example.com" autocomplete="email" />
+                  <p class="field-error" id="emailError"></p>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Write a short message"></textarea>
+                  <p class="field-error" id="messageError"></p>
+                </div>
+
+                <button class="submit-button" id="submitButton" type="submit">Send Message</button>
+              </form>
             </div>
           </div>
         </section>
