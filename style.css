@@ -494,6 +494,25 @@ a {
   justify-content: flex-start;
 }
 
+#about .projects-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+#about.projects-hero {
+  min-height: auto;
+  padding-top: 176px;
+  padding-bottom: 110px;
+  align-items: flex-start;
+}
+
+#about .projects-hero-copy {
+  max-width: 980px;
+}
+
+#about .projects-hero-copy h1 {
+  font-size: clamp(3.8rem, 7.8vw, 7.1rem);
+}
+
 .roadmap-hero {
   min-height: 92vh;
   padding: 144px 24px 76px;
@@ -1221,6 +1240,79 @@ a {
 
 .about-grid {
   margin-top: 80px;
+}
+
+.professional-roadmap-section {
+  padding-top: 40px;
+}
+
+.roadmap-title {
+  max-width: 860px;
+}
+
+.professional-roadmap {
+  position: relative;
+  margin-top: 48px;
+  padding: 38px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  overflow: hidden;
+}
+
+.professional-roadmap::before {
+  content: "";
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  top: 74px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(167, 139, 250, 0.18), rgba(96, 165, 250, 0.65), rgba(52, 211, 153, 0.52));
+}
+
+.journey-step {
+  position: relative;
+  z-index: 1;
+  min-height: 260px;
+  padding: 72px 22px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
+    rgba(8, 6, 20, 0.28);
+}
+
+.journey-index {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(125, 211, 252, 0.42);
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(124, 106, 247, 0.85), rgba(20, 184, 166, 0.78));
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  box-shadow: 0 14px 34px rgba(96, 165, 250, 0.2);
+}
+
+.journey-step h3 {
+  margin: 0;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.18rem;
+  line-height: 1.24;
+}
+
+.journey-step p {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .stacked-cards {
@@ -2292,6 +2384,18 @@ a {
     gap: 36px;
   }
 
+  #about .projects-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .professional-roadmap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .professional-roadmap::before {
+    display: none;
+  }
+
   .roadmap-compass {
     max-width: 760px;
   }
@@ -2493,6 +2597,17 @@ a {
   .roadmap-hero-copy > p {
     margin-top: 24px;
     font-size: 1.04rem;
+  }
+
+  .professional-roadmap {
+    padding: 24px;
+    grid-template-columns: 1fr;
+  }
+
+  .journey-step {
+    min-height: auto;
+    padding: 68px 20px 22px;
+    border-radius: 18px;
   }
 
   .projects-hero-copy .hero-buttons {
