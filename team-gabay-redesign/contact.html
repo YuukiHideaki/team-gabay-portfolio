@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Team Gabay for project inquiries, feedback, or collaboration." />
+    <title>Contact - Team Gabay Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { ink: "#071326", muted: "#5d6b7a", brand: "#0f4fb8", leaf: "#12824c" } } } };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="contact">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main navigation">
+        <a class="text-2xl font-extrabold tracking-tight text-brand" href="index.html">Team Gabay</a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a class="nav-link" data-nav="home" href="index.html">Home</a>
+          <a class="nav-link" data-nav="about" href="about.html">About</a>
+          <a class="nav-link" data-nav="projects" href="projects.html">Projects</a>
+          <a class="nav-link" data-nav="contact" href="contact.html">Contact</a>
+          <a class="button-primary px-5 py-3" href="contact.html">Get in Touch</a>
+        </div>
+        <button class="menu-button flex flex-col gap-[5px] rounded-md border border-slate-300 p-3 md:hidden" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="menu-line"></span><span class="menu-line"></span><span class="menu-line"></span>
+        </button>
+      </nav>
+      <div class="mobile-menu md:hidden" id="mobileMenu">
+        <div class="mx-auto grid max-w-6xl gap-2 px-5 py-4">
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="index.html">Home</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="about.html">About</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="projects.html">Projects</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="mx-auto grid max-w-6xl gap-12 px-5 py-16 lg:grid-cols-[0.8fr_1.2fr]">
+        <div class="section-reveal">
+          <h1 class="text-4xl font-extrabold tracking-tight text-ink md:text-5xl">Let's Work Together</h1>
+          <p class="mt-5 text-lg leading-8 text-muted">Potential clients, classmates, and instructors can reach us through the form or the direct channels below.</p>
+
+          <div class="mt-10 grid gap-5">
+            <a class="content-card lift-card flex items-center gap-4 p-5" href="mailto:jacalipusan@fit.edu.ph">
+              <span class="grid h-11 w-11 place-items-center rounded-md bg-slate-100 text-brand">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span><strong class="block text-ink">Email</strong><span class="text-muted">jacalipusan@fit.edu.ph</span></span>
+            </a>
+            <a class="content-card lift-card flex items-center gap-4 p-5" href="mailto:jaanore@fit.edu.ph">
+              <span class="grid h-11 w-11 place-items-center rounded-md bg-slate-100 text-brand">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span><strong class="block text-ink">Email</strong><span class="text-muted">jaanore@fit.edu.ph</span></span>
+            </a>
+            <a class="content-card lift-card flex items-center gap-4 p-5" href="https://github.com/YuukiHideaki" target="_blank" rel="noreferrer">
+              <span class="grid h-11 w-11 place-items-center rounded-md bg-slate-100 text-brand">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.82c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.34-3.8-1.34-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 .1.9 2.63 2.95 1.87.1-.72.39-1.21.71-1.49-2.5-.28-5.14-1.25-5.14-5.58 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.16a10.7 10.7 0 0 1 5.62 0c2.14-1.46 3.08-1.16 3.08-1.16.62 1.55.23 2.7.12 2.98.72.79 1.15 1.8 1.15 3.03 0 4.34-2.64 5.3-5.15 5.58.4.35.76 1.04.76 2.1v3.13c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg>
+              </span>
+              <span><strong class="block text-ink">GitHub</strong><span class="text-muted">github.com/YuukiHideaki</span></span>
+            </a>
+          </div>
+        </div>
+
+        <form class="content-card section-reveal p-6 md:p-8" id="contactForm" novalidate>
+          <div class="grid gap-5">
+            <div>
+              <label class="mb-2 block font-bold text-ink" for="name">Your Name</label>
+              <input class="form-field" id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" />
+              <p class="field-error" id="nameError"></p>
+            </div>
+            <div>
+              <label class="mb-2 block font-bold text-ink" for="email">Email Address</label>
+              <input class="form-field" id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" />
+              <p class="field-error" id="emailError"></p>
+            </div>
+            <div>
+              <label class="mb-2 block font-bold text-ink" for="message">Message</label>
+              <textarea class="form-field min-h-36 resize-y" id="message" name="message" placeholder="Type your message..."></textarea>
+              <p class="field-error" id="messageError"></p>
+            </div>
+            <button class="button-primary w-full px-6 py-4" type="submit">
+              Send Message
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m22 2-11 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-ink px-5 py-6 text-center text-sm font-semibold text-white">
+      <p>&copy; 2026 Team Gabay - John Rolly A. Calipusan &amp; James Enrico Anore. IT0043/L Final Project.</p>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

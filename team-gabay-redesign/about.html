@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About Team Gabay: background, skills, and web design journey." />
+    <title>About - Team Gabay Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { ink: "#071326", muted: "#5d6b7a", brand: "#0f4fb8", leaf: "#12824c" } } } };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="about">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main navigation">
+        <a class="text-2xl font-extrabold tracking-tight text-brand" href="index.html">Team Gabay</a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a class="nav-link" data-nav="home" href="index.html">Home</a>
+          <a class="nav-link" data-nav="about" href="about.html">About</a>
+          <a class="nav-link" data-nav="projects" href="projects.html">Projects</a>
+          <a class="nav-link" data-nav="contact" href="contact.html">Contact</a>
+          <a class="button-primary px-5 py-3" href="contact.html">Get in Touch</a>
+        </div>
+        <button class="menu-button flex flex-col gap-[5px] rounded-md border border-slate-300 p-3 md:hidden" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="menu-line"></span><span class="menu-line"></span><span class="menu-line"></span>
+        </button>
+      </nav>
+      <div class="mobile-menu md:hidden" id="mobileMenu">
+        <div class="mx-auto grid max-w-6xl gap-2 px-5 py-4">
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="index.html">Home</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="about.html">About</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="projects.html">Projects</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="mx-auto max-w-4xl px-5 py-16 text-center section-reveal">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink md:text-5xl">About Team Gabay</h1>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">We are first-year IT students building our foundation in web design, client-side scripting, and practical front-end workflows.</p>
+      </section>
+
+      <section class="mx-auto grid max-w-6xl gap-10 px-5 pb-16 lg:grid-cols-[0.95fr_1.05fr]">
+        <div>
+          <h2 class="text-2xl font-extrabold text-brand">The Team</h2>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+            <article class="content-card lift-card reveal-item p-6">
+              <div class="flex items-center gap-4">
+                <div class="grid h-16 w-16 place-items-center rounded-md bg-brand text-2xl font-extrabold text-white">JR</div>
+                <div>
+                  <h3 class="text-xl font-extrabold text-ink">John Rolly A. Calipusan</h3>
+                  <p class="font-bold text-brand">Lead Programmer &amp; Designer</p>
+                </div>
+              </div>
+              <p class="mt-5 leading-7 text-muted">Enjoys turning layouts into working pages and making sure the design still looks good once it becomes code. Handles most of the programming and visual direction for Team Gabay.</p>
+              <div class="mt-5 flex flex-wrap gap-2 text-sm font-bold text-slate-700">
+                <span class="rounded-md bg-slate-100 px-3 py-2">UI Design</span><span class="rounded-md bg-slate-100 px-3 py-2">Frontend</span><span class="rounded-md bg-slate-100 px-3 py-2">JavaScript</span>
+              </div>
+            </article>
+            <article class="content-card lift-card reveal-item p-6">
+              <div class="flex items-center gap-4">
+                <div class="grid h-16 w-16 place-items-center rounded-md bg-leaf text-2xl font-extrabold text-white">JA</div>
+                <div>
+                  <h3 class="text-xl font-extrabold text-ink">James Enrico Anore</h3>
+                  <p class="font-bold text-leaf">Team Leader</p>
+                </div>
+              </div>
+              <p class="mt-5 leading-7 text-muted">Helps organize the team's tasks, checks the flow of each page, and keeps the group focused on finishing work that is clear, useful, and ready for class submission.</p>
+              <div class="mt-5 flex flex-wrap gap-2 text-sm font-bold text-slate-700">
+                <span class="rounded-md bg-slate-100 px-3 py-2">Planning</span><span class="rounded-md bg-slate-100 px-3 py-2">Review</span><span class="rounded-md bg-slate-100 px-3 py-2">Team Flow</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-extrabold text-brand">Skills &amp; Technologies</h2>
+          <div class="mt-5 grid grid-cols-2 gap-4 md:grid-cols-3">
+            <div class="skill-tile reveal-item"><strong>HTML5</strong><p class="text-sm text-muted">Structure</p></div>
+            <div class="skill-tile reveal-item"><strong>CSS3</strong><p class="text-sm text-muted">Styling</p></div>
+            <div class="skill-tile reveal-item"><strong>JavaScript</strong><p class="text-sm text-muted">Interaction</p></div>
+            <div class="skill-tile reveal-item"><strong>C++</strong><p class="text-sm text-muted">Programming</p></div>
+            <div class="skill-tile reveal-item"><strong>C</strong><p class="text-sm text-muted">Programming</p></div>
+            <div class="skill-tile reveal-item"><strong>Python</strong><p class="text-sm text-muted">Programming</p></div>
+            <div class="skill-tile reveal-item"><strong>Basic SQL</strong><p class="text-sm text-muted">Data</p></div>
+            <div class="skill-tile reveal-item"><strong>Figma</strong><p class="text-sm text-muted">Design</p></div>
+            <div class="skill-tile reveal-item"><strong>Git</strong><p class="text-sm text-muted">Workflow</p></div>
+            <div class="skill-tile reveal-item md:col-span-3"><strong>GitHub</strong><p class="text-sm text-muted">Version control and sharing</p></div>
+          </div>
+
+          <article class="content-card reveal-item mt-6 p-6">
+            <h2 class="text-2xl font-extrabold text-ink">Course Info</h2>
+            <div class="mt-4 grid gap-3 text-muted">
+              <p><strong class="text-ink">Subject:</strong> Web Design with Client-Side Scripting (IT0043/L)</p>
+              <p><strong class="text-ink">Instructor:</strong> John Benedic R. Enriquez</p>
+              <p><strong class="text-ink">Year &amp; Term:</strong> 1st Year - 3rd Term</p>
+              <p><strong class="text-ink">Semester:</strong> 2025-2026</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink px-5 py-6 text-center text-sm font-semibold text-white">
+      <p>&copy; 2026 Team Gabay - John Rolly A. Calipusan &amp; James Enrico Anore. IT0043/L Final Project.</p>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

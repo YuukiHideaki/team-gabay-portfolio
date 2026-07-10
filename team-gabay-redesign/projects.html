@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Team Gabay project portfolio featuring Asukal Check, StudyBase, and File Vault." />
+    <title>Projects - Team Gabay Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { ink: "#071326", muted: "#5d6b7a", brand: "#0f4fb8", leaf: "#12824c" } } } };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="projects">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main navigation">
+        <a class="text-2xl font-extrabold tracking-tight text-brand" href="index.html">Team Gabay</a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a class="nav-link" data-nav="home" href="index.html">Home</a>
+          <a class="nav-link" data-nav="about" href="about.html">About</a>
+          <a class="nav-link" data-nav="projects" href="projects.html">Projects</a>
+          <a class="nav-link" data-nav="contact" href="contact.html">Contact</a>
+          <a class="button-primary px-5 py-3" href="contact.html">Get in Touch</a>
+        </div>
+        <button class="menu-button flex flex-col gap-[5px] rounded-md border border-slate-300 p-3 md:hidden" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="menu-line"></span><span class="menu-line"></span><span class="menu-line"></span>
+        </button>
+      </nav>
+      <div class="mobile-menu md:hidden" id="mobileMenu">
+        <div class="mx-auto grid max-w-6xl gap-2 px-5 py-4">
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="index.html">Home</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="about.html">About</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="projects.html">Projects</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="mx-auto max-w-4xl px-5 py-16 text-center section-reveal">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink md:text-5xl">Projects by Team Gabay</h1>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">A visual portfolio of prototypes, practice builds, and design decisions shaped into clear, user-focused web experiences.</p>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-5 pb-16">
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="content-card lift-card reveal-item overflow-hidden">
+            <div class="image-frame mx-5 mt-5 aspect-[4/3]">
+              <img src="assets/asukal-dashboard.png" alt="Asukal Check dashboard showing normal glucose status and recent readings" />
+            </div>
+            <div class="p-5">
+              <p class="font-bold text-leaf">Team Project</p>
+              <h2 class="mt-2 text-2xl font-extrabold text-ink">Asukal Check</h2>
+              <p class="mt-3 leading-7 text-muted">An interactive mobile health prototype for logging blood sugar readings, reviewing weekly glucose trends, and learning practical lifestyle tips.</p>
+              <p class="mt-4 text-sm font-bold text-slate-700">Made with: Figma, HTML, CSS, JavaScript</p>
+              <a class="project-link mt-5 inline-flex items-center gap-2 font-extrabold text-leaf" href="https://asukal-check-test.figma.site/" target="_blank" rel="noreferrer">
+                View prototype
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="content-card lift-card reveal-item overflow-hidden">
+            <div class="image-frame mx-5 mt-5 aspect-[4/3]">
+              <img src="assets/studybase-dashboard-light.jpeg" alt="StudyBase dashboard screen prototype" />
+            </div>
+            <div class="p-5">
+              <p class="font-bold text-leaf">By John Rolly A. Calipusan</p>
+              <h2 class="mt-2 text-2xl font-extrabold text-ink">StudyBase</h2>
+              <p class="mt-3 leading-7 text-muted">A student-focused productivity prototype for managing class deadlines, schedules, finances, grades, and study sessions.</p>
+              <p class="mt-4 text-sm font-bold text-slate-700">Made with: Figma, HTML, CSS, JavaScript</p>
+              <a class="project-link mt-5 inline-flex items-center gap-2 font-extrabold text-leaf" href="https://studybase-prototype.figma.site/" target="_blank" rel="noreferrer">
+                View prototype
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="content-card lift-card reveal-item overflow-hidden">
+            <div class="image-frame mx-5 mt-5 aspect-[4/3]">
+              <img src="assets/file-vault-preview.jpeg" alt="File Vault file searcher project interface" />
+            </div>
+            <div class="p-5">
+              <p class="font-bold text-leaf">By James Enrico Anore</p>
+              <h2 class="mt-2 text-2xl font-extrabold text-ink">File Vault</h2>
+              <p class="mt-3 leading-7 text-muted">A file searcher project for uploading multiple documents, filtering filenames, and displaying saved learning resources.</p>
+              <p class="mt-4 text-sm font-bold text-slate-700">Made with: HTML, CSS, JavaScript</p>
+              <a class="project-link mt-5 inline-flex items-center gap-2 font-extrabold text-leaf" href="https://file-vault.ct.ws/" target="_blank" rel="noreferrer">
+                View project
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="border-y border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-5 py-16">
+          <div class="section-reveal">
+            <h2 class="text-3xl font-extrabold text-ink">Interface gallery</h2>
+            <p class="mt-3 max-w-2xl leading-7 text-muted">Click any screenshot to view a larger preview.</p>
+          </div>
+
+          <div class="mt-8 grid gap-8">
+            <article class="reveal-item">
+              <h3 class="text-2xl font-extrabold text-brand">Asukal Check</h3>
+              <div class="mt-4 grid gap-5 md:grid-cols-3">
+                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/asukal-dashboard.png" data-title="Asukal Check - Dashboard" data-caption="Quick overview of current blood sugar status, recent readings, and average results.">
+                  <span class="image-frame block aspect-[9/13]"><img src="assets/asukal-dashboard.png" alt="Asukal Check dashboard screen" /></span>
+                  <strong class="mt-3 block">Dashboard</strong>
+                </button>
+                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/asukal-trends-clean.png" data-title="Asukal Check - Trends" data-caption="Weekly chart for spotting glucose patterns and possible blood sugar spikes.">
+                  <span class="image-frame block aspect-[9/13]"><img src="assets/asukal-trends-clean.png" alt="Asukal Check trends screen" /></span>
+                  <strong class="mt-3 block">Trends</strong>
+                </button>
+                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/asukal-tips-clean.png" data-title="Asukal Check - Tips" data-caption="Friendly lifestyle guidance about meals, walking, checkups, and daily habits.">
+                  <span class="image-frame block aspect-[9/13]"><img src="assets/asukal-tips-clean.png" alt="Asukal Check tips and knowledge screen" /></span>
+                  <strong class="mt-3 block">Tips</strong>
+                </button>
+              </div>
+            </article>
+
+            <article class="reveal-item">
+              <h3 class="text-2xl font-extrabold text-brand">StudyBase</h3>
+              <div class="mt-4 grid gap-5 md:grid-cols-3">
+                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/studybase-dashboard-light.jpeg" data-title="StudyBase - Student dashboard" data-caption="Overview cards for deadlines, daily classes, budget status, savings, GPA, and transactions.">
+                  <span class="image-frame block aspect-[4/3]"><img src="assets/studybase-dashboard-light.jpeg" alt="StudyBase light dashboard screen" /></span>
+                  <strong class="mt-3 block">Student dashboard</strong>
+                </button>
+                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/studybase-planner.jpeg" data-title="StudyBase - Planner" data-caption="Assignment groups, priority tags, and due-date sections for keeping class work organized.">
+                  <span class="image-frame block aspect-[4/3]"><img src="assets/studybase-planner.jpeg" alt="StudyBase planner assignments screen" /></span>
+                  <strong class="mt-3 block">Planner</strong>
+                </button>
+                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/studybase-finance.jpeg" data-title="StudyBase - Finance" data-caption="Budget summaries, spending categories, and income-versus-expense visuals for student money tracking.">
+                  <span class="image-frame block aspect-[4/3]"><img src="assets/studybase-finance.jpeg" alt="StudyBase finance overview screen" /></span>
+                  <strong class="mt-3 block">Finance</strong>
+                </button>
+              </div>
+            </article>
+
+            <article class="reveal-item">
+              <h3 class="text-2xl font-extrabold text-brand">File Vault</h3>
+              <div class="mt-4 grid gap-5 md:grid-cols-2">
+                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/file-vault-preview.jpeg" data-title="File Vault - File search" data-caption="Upload multiple documents, search filenames, and browse saved PDF resources in one simple vault.">
+                  <span class="image-frame block aspect-video"><img src="assets/file-vault-preview.jpeg" alt="File Vault upload and file search screen" /></span>
+                  <strong class="mt-3 block">File search</strong>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink px-5 py-6 text-center text-sm font-semibold text-white">
+      <p>&copy; 2026 Team Gabay - John Rolly A. Calipusan &amp; James Enrico Anore. IT0043/L Final Project.</p>
+    </footer>
+
+    <div class="lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+      <div class="lightbox-panel">
+        <div class="flex items-center justify-between border-b border-slate-200 p-4">
+          <div>
+            <strong id="lightboxTitle" class="text-lg text-ink"></strong>
+            <p id="lightboxCaption" class="mt-1 text-sm text-muted"></p>
+          </div>
+          <button class="button-secondary px-4 py-2" type="button" data-lightbox-close>Close</button>
+        </div>
+        <img id="lightboxImage" src="" alt="" />
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
