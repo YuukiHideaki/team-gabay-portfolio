@@ -3,238 +3,174 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="About Team Gabay: background, skills, and web design journey."
-    />
+    <meta name="description" content="About Team Gabay: background, skills, and web design journey." />
     <title>About - Team Gabay Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { ink: "#071326", muted: "#5d6b7a", brand: "#0f4fb8", leaf: "#12824c" } } } };
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body data-page="about">
     <a class="skip-link" href="#main">Skip to main content</a>
-    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
-    <div class="background" aria-hidden="true">
-      <div class="motion-orb orb orb-a"></div>
-      <div class="motion-orb orb orb-b"></div>
-      <div class="motion-orb orb orb-c"></div>
-      <div class="motion-orb orb orb-d"></div>
-      <div class="motion-orb orb orb-e"></div>
-      <div class="dot-grid"></div>
-      <div class="vignette"></div>
-    </div>
-
-    <div class="site-wrapper">
-      <header class="navbar" id="navbar">
-        <nav class="nav-inner">
-          <button class="logo-button" type="button" data-href="index.html#home" aria-label="Go to home">
-            <svg width="62" height="46" viewBox="0 0 62 46" aria-label="Team Gabay logo">
-              <defs>
-                <linearGradient id="tg-gradient" x1="0" x2="62" y1="0" y2="0">
-                  <stop offset="0%" stop-color="#a855f7" />
-                  <stop offset="52%" stop-color="#818cf8" />
-                  <stop offset="100%" stop-color="#38bdf8" />
-                </linearGradient>
-                <filter id="tg-glow" x="-30%" y="-30%" width="160%" height="160%">
-                  <feGaussianBlur stdDeviation="2.5" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              <text
-                x="0"
-                y="34"
-                fill="url(#tg-gradient)"
-                filter="url(#tg-glow)"
-                font-family="Space Grotesk, sans-serif"
-                font-size="40"
-                font-weight="900"
-                letter-spacing="-3"
-              >
-                TG
-              </text>
-              <rect x="0" y="40" width="54" height="4" rx="2" fill="url(#tg-gradient)" />
-              <circle cx="56" cy="42" r="2" fill="#a78bfa" />
-              <circle cx="61" cy="42" r="2" fill="#38bdf8" />
-            </svg>
-          </button>
-
-          <div class="desktop-links">
-            <button type="button" class="nav-link" data-href="index.html#home">Home</button>
-            <button type="button" class="nav-link" data-target="about">About</button>
-            <button type="button" class="nav-link" data-href="projects.html">Projects</button>
-            <button type="button" class="nav-link" data-href="contact.html">Contact</button>
-          </div>
-
-          <button class="menu-button" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-          </button>
-        </nav>
-
-        <div class="mobile-menu" id="mobileMenu">
-          <button type="button" class="mobile-link" data-href="index.html#home">Home</button>
-          <button type="button" class="mobile-link" data-target="about">About</button>
-          <button type="button" class="mobile-link" data-href="projects.html">Projects</button>
-          <button type="button" class="mobile-link" data-href="contact.html">Contact</button>
+    <header class="site-header">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main navigation">
+        <a class="text-2xl font-extrabold tracking-tight text-brand" href="index.html">Team Gabay</a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a class="nav-link" data-nav="home" href="index.html">Home</a>
+          <a class="nav-link" data-nav="about" href="about.html">About</a>
+          <a class="nav-link" data-nav="projects" href="projects.html">Projects</a>
+          <a class="button-primary px-5 py-3" href="contact.html">Contact</a>
         </div>
-      </header>
+        <button class="menu-button flex flex-col gap-[5px] rounded-md border border-slate-300 p-3 md:hidden" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="menu-line"></span><span class="menu-line"></span><span class="menu-line"></span>
+        </button>
+      </nav>
+      <div class="mobile-menu md:hidden" id="mobileMenu">
+        <div class="mx-auto grid max-w-6xl gap-2 px-5 py-4">
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="index.html">Home</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="about.html">About</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="projects.html">Projects</a>
+          <a class="rounded-md px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
 
-      <main id="main">
-        <section class="projects-hero reveal-now" id="about">
-          <div class="section-inner projects-hero-grid">
-            <div class="projects-hero-copy">
-              <h1>About <span class="gradient-title">Team Gabay</span></h1>
-              <p>
-                We are first-year IT students building our foundation in web design, client-side scripting, and
-                practical front-end workflows.
-              </p>
-            </div>
+    <main id="main">
+      <section class="about-hero mx-auto max-w-5xl px-5 py-16 text-center section-reveal">
+        <p>Team profile</p>
+        <h1>About Team Gabay</h1>
+        <p>We are first-year IT students building a stronger foundation in web design, client-side scripting, and practical front-end workflows through focused portfolio projects.</p>
+      </section>
 
+      <section class="mx-auto grid max-w-6xl gap-10 px-5 pb-16">
+        <div>
+          <div class="section-label">
+            <span>Team roles</span>
+            <h2>Meet the builders</h2>
           </div>
-        </section>
-
-        <section class="section reveal-section" id="background">
-          <div class="section-inner">
-            <div class="section-title">
-              <p>Background</p>
-              <h2>Who we are</h2>
-            </div>
-
-            <div class="member-grid">
-              <article class="glass-card member-card">
-                <div class="member-head">
-                  <div class="avatar">JC</div>
-                  <div>
-                    <h3>John Rolly A. Calipusan</h3>
-                    <p class="member-role violet-text">Lead Programmer &amp; Designer</p>
-                  </div>
+          <div class="mt-5 grid gap-5 lg:grid-cols-2">
+            <article class="content-card lift-card reveal-item p-6">
+              <div class="flex items-center gap-4">
+                <div class="grid h-16 w-16 place-items-center rounded-md bg-brand text-2xl font-extrabold text-white">JR</div>
+                <div>
+                  <h3 class="text-xl font-extrabold text-ink">John Rolly A. Calipusan</h3>
+                  <p class="font-bold text-brand">Lead Programmer &amp; Designer</p>
                 </div>
-                <p>
-                  Enjoys turning layouts into working pages and making sure the design still looks good once it
-                  becomes code. Handles most of the programming and visual direction for Team Gabay.
-                </p>
-                <div class="member-tags"><span>UI Design</span><span>Frontend</span><span>Prototype Polish</span><span>Responsive Layout</span><span>JavaScript</span></div>
-              </article>
-
-              <article class="glass-card member-card">
-                <div class="member-head">
-                  <div class="avatar blue-avatar">JA</div>
-                  <div>
-                    <h3>James Enrico Anore</h3>
-                    <p class="member-role blue-text">Team Leader</p>
-                  </div>
-                </div>
-                <p>
-                  Helps organize the team's tasks, checks the flow of each page, and keeps the group focused on
-                  finishing work that is clear, useful, and ready for class submission.
-                </p>
-                <div class="member-tags"><span>Planning</span><span>Review</span><span>Team Flow</span></div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section reveal-section" id="skills">
-          <div class="section-inner">
-            <div class="about-grid">
-              <article class="glass-card skills-card">
-                <h3>Our Skills</h3>
-
-                <div class="skill-group violet-group">
-                  <div class="skill-divider"><span></span><strong>Frontend</strong><span></span></div>
-                  <div class="skill-pills">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                  </div>
-                </div>
-
-                <div class="skill-group blue-group">
-                  <div class="skill-divider"><span></span><strong>Programming</strong><span></span></div>
-                  <div class="skill-pills">
-                    <span>C++</span>
-                    <span>C</span>
-                    <span>Python</span>
-                  </div>
-                </div>
-
-                <div class="skill-group green-group">
-                  <div class="skill-divider"><span></span><strong>Data &amp; Design</strong><span></span></div>
-                  <div class="skill-pills">
-                    <span>Basic SQL</span>
-                    <span>Figma</span>
-                  </div>
-                </div>
-
-                <div class="skill-group cyan-group">
-                  <div class="skill-divider"><span></span><strong>Workflow</strong><span></span></div>
-                  <div class="skill-pills">
-                    <span>Git</span>
-                    <span>GitHub</span>
-                  </div>
-                </div>
-              </article>
-
-              <div class="stacked-cards">
-                <article class="glass-card">
-                  <h3>Course Info</h3>
-                  <p>Subject: Web Design with Client-Side Scripting (IT0043/L)</p>
-                  <p>Instructor: John Benedic R. Enriquez</p>
-                  <p>Year &amp; Term: 1st Year - 3rd Term</p>
-                  <p>Semester: 2025-2026</p>
-                </article>
               </div>
-            </div>
+              <p class="mt-5 leading-7 text-muted">Focuses on turning the portfolio ideas into working pages, matching the visual direction with clean layouts, responsive behavior, and small interactions that make the site feel more alive.</p>
+              <div class="member-tags mt-5">
+                <span>Interface Design</span><span>Front-End Build</span><span>Responsive Layout</span><span>Motion Design</span>
+              </div>
+            </article>
+            <article class="content-card lift-card reveal-item p-6">
+              <div class="flex items-center gap-4">
+                <div class="grid h-16 w-16 place-items-center rounded-md bg-leaf text-2xl font-extrabold text-white">JA</div>
+                <div>
+                  <h3 class="text-xl font-extrabold text-ink">James Enrico Anore</h3>
+                  <p class="font-bold text-leaf">Team Leader</p>
+                </div>
+              </div>
+              <p class="mt-5 leading-7 text-muted">Helps organize the team's tasks, checks the flow of each page, and keeps the group focused on finishing work that is clear, useful, and ready for class submission.</p>
+              <div class="member-tags mt-5">
+                <span>Project Planning</span><span>Content Review</span><span>Team Coordination</span>
+              </div>
+            </article>
           </div>
-        </section>
+        </div>
 
-        <section class="section reveal-section professional-roadmap-section" id="professional-journey">
-          <div class="section-inner">
-            <div class="section-title roadmap-title">
-              <p>Professional Journey</p>
-              <h2>How we are preparing for professional front-end work</h2>
-            </div>
-
-            <div class="professional-roadmap glass-card" aria-label="Team Gabay professional journey roadmap">
-              <article class="journey-step">
-                <span class="journey-index">01</span>
-                <h3>Academic Foundation</h3>
-                <p>Strengthening core web skills through HTML, CSS, JavaScript, programming logic, and class-based practice.</p>
-              </article>
-
-              <article class="journey-step">
-                <span class="journey-index">02</span>
-                <h3>Role Direction</h3>
-                <p>Clarifying our strengths in UI design, front-end development, planning, review, and team coordination.</p>
-              </article>
-
-              <article class="journey-step">
-                <span class="journey-index">03</span>
-                <h3>Professional Practice</h3>
-                <p>Practicing responsive implementation, cleaner code, communication, and design decisions with real portfolio work.</p>
-              </article>
-
-              <article class="journey-step">
-                <span class="journey-index">04</span>
-                <h3>Career Readiness</h3>
-                <p>Preparing to present our skills confidently through stronger case studies, better documentation, and continued learning.</p>
-              </article>
-            </div>
+        <div class="about-lower-grid">
+          <div class="section-label">
+            <span>Skill set</span>
+            <h2>Tools we practiced</h2>
           </div>
-        </section>
-      </main>
+          <div class="skill-groups mt-5">
+            <article class="skill-group reveal-item">
+              <h3>Web Languages</h3>
+              <div class="skill-list">
+                <div class="skill-tile"><span class="skill-icon html-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" /></span><strong>HTML</strong><p class="text-sm text-muted">Page structure</p></div>
+                <div class="skill-tile"><span class="skill-icon css-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" /></span><strong>CSS</strong><p class="text-sm text-muted">Visual styling</p></div>
+                <div class="skill-tile"><span class="skill-icon js-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" /></span><strong>JavaScript</strong><p class="text-sm text-muted">Interaction logic</p></div>
+                <div class="skill-tile"><span class="skill-icon tw-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" /></span><strong>Tailwind</strong><p class="text-sm text-muted">Utility classes</p></div>
+              </div>
+            </article>
 
-      <footer class="footer">
-        <p>&copy; 2026 Team Gabay - John Rolly A. Calipusan &amp; James Enrico Anore. IT0043/L Final Project.</p>
-      </footer>
-    </div>
+            <article class="skill-group reveal-item">
+              <h3>Programming Foundations</h3>
+              <div class="skill-list">
+                <div class="skill-tile"><span class="skill-icon code-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="" /></span><strong>C++</strong><p class="text-sm text-muted">Problem solving</p></div>
+                <div class="skill-tile"><span class="skill-icon code-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="" /></span><strong>C</strong><p class="text-sm text-muted">Programming basics</p></div>
+                <div class="skill-tile"><span class="skill-icon py-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" /></span><strong>Python</strong><p class="text-sm text-muted">Logic practice</p></div>
+                <div class="skill-tile"><span class="skill-icon sql-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="" /></span><strong>Basic SQL</strong><p class="text-sm text-muted">Data queries</p></div>
+              </div>
+            </article>
 
+            <article class="skill-group reveal-item">
+              <h3>Design &amp; Workflow</h3>
+              <div class="skill-list">
+                <div class="skill-tile"><span class="skill-icon figma-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="" /></span><strong>Figma</strong><p class="text-sm text-muted">Interface planning</p></div>
+                <div class="skill-tile"><span class="skill-icon git-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" /></span><strong>Git</strong><p class="text-sm text-muted">Version workflow</p></div>
+                <div class="skill-tile"><span class="skill-icon github-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" /></span><strong>GitHub</strong><p class="text-sm text-muted">Project sharing</p></div>
+              </div>
+            </article>
+          </div>
+
+          <article class="content-card reveal-item course-card">
+            <div>
+              <span>Course Context</span>
+              <h2>IT0043/L Web Design &amp; Client-Side Scripting</h2>
+            </div>
+            <div class="course-meta-grid">
+              <p><strong>Instructor</strong><span>John Benedic R. Enriquez</span></p>
+              <p><strong>Year &amp; Term</strong><span>1st Year - 3rd Term</span></p>
+              <p><strong>Semester</strong><span>2025-2026</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="roadmap-section mx-auto max-w-6xl px-5 pb-16">
+        <div class="section-label section-reveal">
+          <span>Professional journey roadmap</span>
+          <h2>Building toward future web work</h2>
+        </div>
+        <div class="roadmap-track mt-8">
+          <article class="roadmap-item reveal-item">
+            <span class="roadmap-dot">01</span>
+            <div>
+              <h3>Build the foundation</h3>
+              <p>Strengthen HTML, CSS, JavaScript, responsive layout, and version-control habits through small but complete projects.</p>
+            </div>
+          </article>
+          <article class="roadmap-item reveal-item">
+            <span class="roadmap-dot">02</span>
+            <div>
+              <h3>Design usable interfaces</h3>
+              <p>Practice wireframes, spacing, visual hierarchy, accessibility basics, and interaction details that make pages easier to understand.</p>
+            </div>
+          </article>
+          <article class="roadmap-item reveal-item">
+            <span class="roadmap-dot">03</span>
+            <div>
+              <h3>Ship portfolio-ready work</h3>
+              <p>Turn prototypes into polished case-study sections with screenshots, links, clear descriptions, and consistent presentation.</p>
+            </div>
+          </article>
+          <article class="roadmap-item reveal-item">
+            <span class="roadmap-dot">04</span>
+            <div>
+              <h3>Grow into client projects</h3>
+              <p>Use feedback, testing, and iteration to prepare for real websites, team collaboration, and future front-end development roles.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink px-5 py-6 text-center text-sm font-semibold text-white">
+      <p>&copy; 2026 Team Gabay - John Rolly A. Calipusan &amp; James Enrico Anore. IT0043/L Final Project.</p>
+    </footer>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
