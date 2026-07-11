@@ -20,8 +20,7 @@
           <a class="nav-link" data-nav="home" href="index.html">Home</a>
           <a class="nav-link" data-nav="about" href="about.html">About</a>
           <a class="nav-link" data-nav="projects" href="projects.html">Projects</a>
-          <a class="nav-link" data-nav="contact" href="contact.html">Contact</a>
-          <a class="button-primary px-5 py-3" href="contact.html">Get in Touch</a>
+          <a class="button-primary px-5 py-3" href="contact.html">Contact</a>
         </div>
         <button class="menu-button flex flex-col gap-[5px] rounded-md border border-slate-300 p-3 md:hidden" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
           <span class="menu-line"></span><span class="menu-line"></span><span class="menu-line"></span>
@@ -38,15 +37,19 @@
     </header>
 
     <main id="main">
-      <section class="mx-auto max-w-4xl px-5 py-16 text-center section-reveal">
-        <h1 class="text-4xl font-extrabold tracking-tight text-ink md:text-5xl">About Team Gabay</h1>
-        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">We are first-year IT students building our foundation in web design, client-side scripting, and practical front-end workflows.</p>
+      <section class="about-hero mx-auto max-w-5xl px-5 py-16 text-center section-reveal">
+        <p>Team profile</p>
+        <h1>About Team Gabay</h1>
+        <p>We are first-year IT students building a stronger foundation in web design, client-side scripting, and practical front-end workflows through focused portfolio projects.</p>
       </section>
 
-      <section class="mx-auto grid max-w-6xl gap-10 px-5 pb-16 lg:grid-cols-[0.95fr_1.05fr]">
+      <section class="mx-auto grid max-w-6xl gap-10 px-5 pb-16">
         <div>
-          <h2 class="text-2xl font-extrabold text-brand">The Team</h2>
-          <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+          <div class="section-label">
+            <span>Team roles</span>
+            <h2>Meet the builders</h2>
+          </div>
+          <div class="mt-5 grid gap-5 lg:grid-cols-2">
             <article class="content-card lift-card reveal-item p-6">
               <div class="flex items-center gap-4">
                 <div class="grid h-16 w-16 place-items-center rounded-md bg-brand text-2xl font-extrabold text-white">JR</div>
@@ -55,9 +58,9 @@
                   <p class="font-bold text-brand">Lead Programmer &amp; Designer</p>
                 </div>
               </div>
-              <p class="mt-5 leading-7 text-muted">Enjoys turning layouts into working pages and making sure the design still looks good once it becomes code. Handles most of the programming and visual direction for Team Gabay.</p>
-              <div class="mt-5 flex flex-wrap gap-2 text-sm font-bold text-slate-700">
-                <span class="rounded-md bg-slate-100 px-3 py-2">UI Design</span><span class="rounded-md bg-slate-100 px-3 py-2">Frontend</span><span class="rounded-md bg-slate-100 px-3 py-2">JavaScript</span>
+              <p class="mt-5 leading-7 text-muted">Focuses on turning the portfolio ideas into working pages, matching the visual direction with clean layouts, responsive behavior, and small interactions that make the site feel more alive.</p>
+              <div class="member-tags mt-5">
+                <span>Interface Design</span><span>Front-End Build</span><span>Responsive Layout</span><span>Motion Design</span>
               </div>
             </article>
             <article class="content-card lift-card reveal-item p-6">
@@ -69,35 +72,95 @@
                 </div>
               </div>
               <p class="mt-5 leading-7 text-muted">Helps organize the team's tasks, checks the flow of each page, and keeps the group focused on finishing work that is clear, useful, and ready for class submission.</p>
-              <div class="mt-5 flex flex-wrap gap-2 text-sm font-bold text-slate-700">
-                <span class="rounded-md bg-slate-100 px-3 py-2">Planning</span><span class="rounded-md bg-slate-100 px-3 py-2">Review</span><span class="rounded-md bg-slate-100 px-3 py-2">Team Flow</span>
+              <div class="member-tags mt-5">
+                <span>Project Planning</span><span>Content Review</span><span>Team Coordination</span>
               </div>
             </article>
           </div>
         </div>
 
-        <div>
-          <h2 class="text-2xl font-extrabold text-brand">Skills &amp; Technologies</h2>
-          <div class="mt-5 grid grid-cols-2 gap-4 md:grid-cols-3">
-            <div class="skill-tile reveal-item"><strong>HTML5</strong><p class="text-sm text-muted">Structure</p></div>
-            <div class="skill-tile reveal-item"><strong>CSS3</strong><p class="text-sm text-muted">Styling</p></div>
-            <div class="skill-tile reveal-item"><strong>JavaScript</strong><p class="text-sm text-muted">Interaction</p></div>
-            <div class="skill-tile reveal-item"><strong>C++</strong><p class="text-sm text-muted">Programming</p></div>
-            <div class="skill-tile reveal-item"><strong>C</strong><p class="text-sm text-muted">Programming</p></div>
-            <div class="skill-tile reveal-item"><strong>Python</strong><p class="text-sm text-muted">Programming</p></div>
-            <div class="skill-tile reveal-item"><strong>Basic SQL</strong><p class="text-sm text-muted">Data</p></div>
-            <div class="skill-tile reveal-item"><strong>Figma</strong><p class="text-sm text-muted">Design</p></div>
-            <div class="skill-tile reveal-item"><strong>Git</strong><p class="text-sm text-muted">Workflow</p></div>
-            <div class="skill-tile reveal-item md:col-span-3"><strong>GitHub</strong><p class="text-sm text-muted">Version control and sharing</p></div>
+        <div class="about-lower-grid">
+          <div class="section-label">
+            <span>Skill set</span>
+            <h2>Tools we practiced</h2>
+          </div>
+          <div class="skill-groups mt-5">
+            <article class="skill-group reveal-item">
+              <h3>Web Languages</h3>
+              <div class="skill-list">
+                <div class="skill-tile"><span class="skill-icon html-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" /></span><strong>HTML</strong><p class="text-sm text-muted">Page structure</p></div>
+                <div class="skill-tile"><span class="skill-icon css-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" /></span><strong>CSS</strong><p class="text-sm text-muted">Visual styling</p></div>
+                <div class="skill-tile"><span class="skill-icon js-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" /></span><strong>JavaScript</strong><p class="text-sm text-muted">Interaction logic</p></div>
+                <div class="skill-tile"><span class="skill-icon tw-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" /></span><strong>Tailwind</strong><p class="text-sm text-muted">Utility classes</p></div>
+              </div>
+            </article>
+
+            <article class="skill-group reveal-item">
+              <h3>Programming Foundations</h3>
+              <div class="skill-list">
+                <div class="skill-tile"><span class="skill-icon code-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="" /></span><strong>C++</strong><p class="text-sm text-muted">Problem solving</p></div>
+                <div class="skill-tile"><span class="skill-icon code-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="" /></span><strong>C</strong><p class="text-sm text-muted">Programming basics</p></div>
+                <div class="skill-tile"><span class="skill-icon py-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" /></span><strong>Python</strong><p class="text-sm text-muted">Logic practice</p></div>
+                <div class="skill-tile"><span class="skill-icon sql-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="" /></span><strong>Basic SQL</strong><p class="text-sm text-muted">Data queries</p></div>
+              </div>
+            </article>
+
+            <article class="skill-group reveal-item">
+              <h3>Design &amp; Workflow</h3>
+              <div class="skill-list">
+                <div class="skill-tile"><span class="skill-icon figma-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="" /></span><strong>Figma</strong><p class="text-sm text-muted">Interface planning</p></div>
+                <div class="skill-tile"><span class="skill-icon git-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" /></span><strong>Git</strong><p class="text-sm text-muted">Version workflow</p></div>
+                <div class="skill-tile"><span class="skill-icon github-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" /></span><strong>GitHub</strong><p class="text-sm text-muted">Project sharing</p></div>
+              </div>
+            </article>
           </div>
 
-          <article class="content-card reveal-item mt-6 p-6">
-            <h2 class="text-2xl font-extrabold text-ink">Course Info</h2>
-            <div class="mt-4 grid gap-3 text-muted">
-              <p><strong class="text-ink">Subject:</strong> Web Design with Client-Side Scripting (IT0043/L)</p>
-              <p><strong class="text-ink">Instructor:</strong> John Benedic R. Enriquez</p>
-              <p><strong class="text-ink">Year &amp; Term:</strong> 1st Year - 3rd Term</p>
-              <p><strong class="text-ink">Semester:</strong> 2025-2026</p>
+          <article class="content-card reveal-item course-card">
+            <div>
+              <span>Course Context</span>
+              <h2>IT0043/L Web Design &amp; Client-Side Scripting</h2>
+            </div>
+            <div class="course-meta-grid">
+              <p><strong>Instructor</strong><span>John Benedic R. Enriquez</span></p>
+              <p><strong>Year &amp; Term</strong><span>1st Year - 3rd Term</span></p>
+              <p><strong>Semester</strong><span>2025-2026</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="roadmap-section mx-auto max-w-6xl px-5 pb-16">
+        <div class="section-label section-reveal">
+          <span>Professional journey roadmap</span>
+          <h2>Building toward future web work</h2>
+        </div>
+        <div class="roadmap-track mt-8">
+          <article class="roadmap-item reveal-item">
+            <span class="roadmap-dot">01</span>
+            <div>
+              <h3>Build the foundation</h3>
+              <p>Strengthen HTML, CSS, JavaScript, responsive layout, and version-control habits through small but complete projects.</p>
+            </div>
+          </article>
+          <article class="roadmap-item reveal-item">
+            <span class="roadmap-dot">02</span>
+            <div>
+              <h3>Design usable interfaces</h3>
+              <p>Practice wireframes, spacing, visual hierarchy, accessibility basics, and interaction details that make pages easier to understand.</p>
+            </div>
+          </article>
+          <article class="roadmap-item reveal-item">
+            <span class="roadmap-dot">03</span>
+            <div>
+              <h3>Ship portfolio-ready work</h3>
+              <p>Turn prototypes into polished case-study sections with screenshots, links, clear descriptions, and consistent presentation.</p>
+            </div>
+          </article>
+          <article class="roadmap-item reveal-item">
+            <span class="roadmap-dot">04</span>
+            <div>
+              <h3>Grow into client projects</h3>
+              <p>Use feedback, testing, and iteration to prepare for real websites, team collaboration, and future front-end development roles.</p>
             </div>
           </article>
         </div>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">StudyBase calendar screenshot</title>
+  <desc id="desc">Calendar page for July 2026 with class, deadline, and transaction markers plus a daily deadline panel.</desc>
+  <rect width="1600" height="760" fill="#f7f7f5"/>
+  <rect width="232" height="760" fill="#fff"/>
+  <line x1="232" y1="0" x2="232" y2="760" stroke="#e7e7e4"/>
+  <rect x="20" y="24" width="36" height="36" rx="9" fill="#332fe5"/>
+  <text x="68" y="36" fill="#111" font-family="Arial, sans-serif" font-size="18" font-weight="700">StudyBase</text>
+  <text x="68" y="55" fill="#666" font-family="Arial, sans-serif" font-size="13">Student hub</text>
+  <rect x="8" y="275" width="216" height="42" rx="10" fill="#eeeafd"/>
+  <text x="96" y="303" fill="#2f2bdc" font-family="Arial, sans-serif" font-size="17">Calendar</text>
+  <text x="96" y="169" fill="#666" font-family="Arial, sans-serif" font-size="17">Dashboard</text>
+  <text x="96" y="213" fill="#666" font-family="Arial, sans-serif" font-size="17">Planner</text>
+  <text x="96" y="258" fill="#666" font-family="Arial, sans-serif" font-size="17">Finance</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="268" y="30" width="852" height="488" rx="12" fill="#fff" stroke="#e4e4e1"/>
+    <text x="290" y="74" font-size="20" font-weight="800">July 2026</text>
+    <rect x="1000" y="56" width="62" height="28" rx="7" fill="#eee"/>
+    <text x="1015" y="75" font-size="14" font-weight="700">Today</text>
+    <g fill="#777" font-size="14" font-weight="700" letter-spacing="1">
+      <text x="332" y="128">SUN</text><text x="445" y="128">MON</text><text x="565" y="128">TUE</text><text x="680" y="128">WED</text><text x="800" y="128">THU</text><text x="920" y="128">FRI</text><text x="1035" y="128">SAT</text>
+    </g>
+    <g fill="#111" font-size="18" font-weight="800">
+      <text x="693" y="170">1</text><text x="812" y="170">2</text><text x="928" y="170">3</text><text x="1045" y="170">4</text>
+      <text x="340" y="230">5</text><text x="460" y="230">6</text><text x="575" y="230">7</text><text x="693" y="230">8</text><text x="812" y="230">9</text><text x="925" y="230">10</text>
+      <rect x="987" y="202" width="116" height="58" rx="12" fill="#eeeeff" stroke="#c8c8f8"/>
+      <circle cx="1045" cy="222" r="16" fill="#3230e8"/><text x="1038" y="228" fill="#fff" font-size="15">11</text>
+      <text x="338" y="292">12</text><text x="458" y="292">13</text><text x="575" y="292">14</text><text x="693" y="292">15</text><text x="812" y="292">16</text><text x="925" y="292">17</text><text x="1045" y="292">18</text>
+      <text x="338" y="352">19</text><text x="458" y="352">20</text><text x="575" y="352">21</text><text x="693" y="352">22</text><text x="812" y="352">23</text><text x="925" y="352">24</text><text x="1045" y="352">25</text>
+      <text x="338" y="413">26</text><text x="458" y="413">27</text><text x="575" y="413">28</text><text x="693" y="413">29</text><text x="812" y="413">30</text><text x="925" y="413">31</text>
+    </g>
+    <g>
+      <circle cx="690" cy="188" r="4" fill="#3230e8"/><circle cx="699" cy="188" r="4" fill="#20bf79"/>
+      <circle cx="807" cy="188" r="4" fill="#3230e8"/><circle cx="817" cy="188" r="4" fill="#f14d5b"/><circle cx="827" cy="188" r="4" fill="#20bf79"/>
+      <circle cx="928" cy="188" r="4" fill="#3230e8"/><circle cx="938" cy="188" r="4" fill="#f14d5b"/><circle cx="948" cy="188" r="4" fill="#20bf79"/>
+      <circle cx="345" cy="247" r="4" fill="#20bf79"/><circle cx="457" cy="247" r="4" fill="#3230e8"/><circle cx="466" cy="247" r="4" fill="#f14d5b"/><circle cx="580" cy="247" r="4" fill="#3230e8"/>
+      <circle cx="1039" cy="250" r="4" fill="#f14d5b"/><circle cx="1045" cy="310" r="4" fill="#f14d5b"/>
+    </g>
+    <line x1="290" y1="460" x2="1100" y2="460" stroke="#e6e6e3"/>
+    <circle cx="292" cy="488" r="5" fill="#3230e8"/><text x="305" y="493" fill="#666" font-size="15">Classes</text>
+    <circle cx="370" cy="488" r="5" fill="#f14d5b"/><text x="383" y="493" fill="#666" font-size="15">Deadlines</text>
+    <circle cx="465" cy="488" r="5" fill="#20bf79"/><text x="478" y="493" fill="#666" font-size="15">Transactions</text>
+    <rect x="1142" y="30" width="416" height="488" rx="12" fill="#fff" stroke="#e4e4e1"/>
+    <text x="1164" y="66" font-size="16" font-weight="800" letter-spacing="2">SATURDAY, JULY 11</text>
+    <text x="1164" y="112" fill="#e24455" font-size="14" font-weight="800" letter-spacing="2">DEADLINES</text>
+    <rect x="1164" y="128" width="374" height="56" rx="7" fill="#f0f0ee"/>
+    <text x="1176" y="154" font-size="16" font-weight="700">Midterm Exam — SQL &amp; Normalization</text>
+    <text x="1176" y="176" fill="#777" font-size="14">Database Management Systems</text>
+  </g>
+</svg>

@@ -20,8 +20,7 @@
           <a class="nav-link" data-nav="home" href="index.html">Home</a>
           <a class="nav-link" data-nav="about" href="about.html">About</a>
           <a class="nav-link" data-nav="projects" href="projects.html">Projects</a>
-          <a class="nav-link" data-nav="contact" href="contact.html">Contact</a>
-          <a class="button-primary px-5 py-3" href="contact.html">Get in Touch</a>
+          <a class="button-primary px-5 py-3" href="contact.html">Contact</a>
         </div>
         <button class="menu-button flex flex-col gap-[5px] rounded-md border border-slate-300 p-3 md:hidden" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
           <span class="menu-line"></span><span class="menu-line"></span><span class="menu-line"></span>
@@ -38,113 +37,202 @@
     </header>
 
     <main id="main">
-      <section class="mx-auto max-w-4xl px-5 py-16 text-center section-reveal">
-        <h1 class="text-4xl font-extrabold tracking-tight text-ink md:text-5xl">Projects by Team Gabay</h1>
-        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">A visual portfolio of prototypes, practice builds, and design decisions shaped into clear, user-focused web experiences.</p>
+      <section class="projects-hero mx-auto max-w-5xl px-5 pb-10 pt-12 text-center section-reveal md:pb-12 md:pt-14">
+        <p class="projects-eyebrow">Featured prototypes</p>
+        <h1>Projects by Team Gabay</h1>
+        <p>A focused walkthrough of our class prototypes, from mobile health screens to student dashboard flows and a simple file utility. Each project shows how we practiced layout, interaction, and user-focused web design.</p>
       </section>
 
-      <section class="mx-auto max-w-6xl px-5 pb-16">
-        <div class="grid gap-6 lg:grid-cols-3">
-          <article class="content-card lift-card reveal-item overflow-hidden">
-            <div class="image-frame mx-5 mt-5 aspect-[4/3]">
-              <img src="assets/asukal-dashboard.png" alt="Asukal Check dashboard showing normal glucose status and recent readings" />
-            </div>
-            <div class="p-5">
-              <p class="font-bold text-leaf">Team Project</p>
-              <h2 class="mt-2 text-2xl font-extrabold text-ink">Asukal Check</h2>
-              <p class="mt-3 leading-7 text-muted">An interactive mobile health prototype for logging blood sugar readings, reviewing weekly glucose trends, and learning practical lifestyle tips.</p>
-              <p class="mt-4 text-sm font-bold text-slate-700">Made with: Figma, HTML, CSS, JavaScript</p>
-              <a class="project-link mt-5 inline-flex items-center gap-2 font-extrabold text-leaf" href="https://asukal-check-test.figma.site/" target="_blank" rel="noreferrer">
-                View prototype
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
+      <section class="project-slider-section pb-16">
+        <div class="project-slider reveal-item" aria-label="Featured projects carousel" data-project-slider>
+          <div class="project-slider-track">
+            <article class="project-slide asukal-slide" data-project-slide>
+              <div class="phone-showcase" aria-hidden="true">
+                <img class="phone-shot phone-shot-left" src="assets/asukal-trends-clean.png" alt="" />
+                <img class="phone-shot phone-shot-center" src="assets/asukal-dashboard.png" alt="" />
+                <img class="phone-shot phone-shot-right" src="assets/asukal-tips-clean.png" alt="" />
+              </div>
+              <div class="project-slide-copy">
+                <p>Team Project</p>
+                <h2>Asukal Check</h2>
+                <span>An interactive mobile health prototype for blood sugar readings, trends, and lifestyle tips.</span>
+                <a class="project-slide-link" href="https://asukal-check-test.figma.site/" target="_blank" rel="noreferrer">View prototype</a>
+              </div>
+            </article>
 
-          <article class="content-card lift-card reveal-item overflow-hidden">
-            <div class="image-frame mx-5 mt-5 aspect-[4/3]">
+            <article class="project-slide" data-project-slide>
               <img src="assets/studybase-dashboard-light.jpeg" alt="StudyBase dashboard screen prototype" />
-            </div>
-            <div class="p-5">
-              <p class="font-bold text-leaf">By John Rolly A. Calipusan</p>
-              <h2 class="mt-2 text-2xl font-extrabold text-ink">StudyBase</h2>
-              <p class="mt-3 leading-7 text-muted">A student-focused productivity prototype for managing class deadlines, schedules, finances, grades, and study sessions.</p>
-              <p class="mt-4 text-sm font-bold text-slate-700">Made with: Figma, HTML, CSS, JavaScript</p>
-              <a class="project-link mt-5 inline-flex items-center gap-2 font-extrabold text-leaf" href="https://studybase-prototype.figma.site/" target="_blank" rel="noreferrer">
-                View prototype
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
+              <div class="project-slide-copy">
+                <p>By John Rolly A. Calipusan</p>
+                <h2>StudyBase</h2>
+                <span>A student productivity prototype for deadlines, schedules, finances, grades, and study sessions.</span>
+                <a class="project-slide-link" href="https://studybase-prototype.figma.site/" target="_blank" rel="noreferrer">View prototype</a>
+              </div>
+            </article>
 
-          <article class="content-card lift-card reveal-item overflow-hidden">
-            <div class="image-frame mx-5 mt-5 aspect-[4/3]">
+            <article class="project-slide" data-project-slide>
               <img src="assets/file-vault-preview.jpeg" alt="File Vault file searcher project interface" />
-            </div>
-            <div class="p-5">
-              <p class="font-bold text-leaf">By James Enrico Anore</p>
-              <h2 class="mt-2 text-2xl font-extrabold text-ink">File Vault</h2>
-              <p class="mt-3 leading-7 text-muted">A file searcher project for uploading multiple documents, filtering filenames, and displaying saved learning resources.</p>
-              <p class="mt-4 text-sm font-bold text-slate-700">Made with: HTML, CSS, JavaScript</p>
-              <a class="project-link mt-5 inline-flex items-center gap-2 font-extrabold text-leaf" href="https://file-vault.ct.ws/" target="_blank" rel="noreferrer">
-                View project
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
+              <div class="project-slide-copy">
+                <p>By James Enrico Anore</p>
+                <h2>File Vault</h2>
+                <span>A file searcher project for uploading documents, filtering filenames, and browsing resources.</span>
+                <a class="project-slide-link" href="https://file-vault.ct.ws/" target="_blank" rel="noreferrer">View project</a>
+              </div>
+            </article>
+          </div>
+          <button class="project-slider-control project-slider-prev" type="button" aria-label="Previous project" data-project-prev>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="project-slider-control project-slider-next" type="button" aria-label="Next project" data-project-next>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="project-slider-dots" aria-label="Choose featured project">
+            <button class="active" type="button" aria-label="Show Asukal Check" aria-current="true" data-project-dot></button>
+            <button type="button" aria-label="Show StudyBase" data-project-dot></button>
+            <button type="button" aria-label="Show File Vault" data-project-dot></button>
+          </div>
         </div>
       </section>
 
-      <section class="border-y border-slate-200 bg-white">
+      <section class="gallery-section border-y border-slate-200">
         <div class="mx-auto max-w-6xl px-5 py-16">
-          <div class="section-reveal">
-            <h2 class="text-3xl font-extrabold text-ink">Interface gallery</h2>
-            <p class="mt-3 max-w-2xl leading-7 text-muted">Click any screenshot to view a larger preview.</p>
+          <div class="gallery-heading section-reveal">
+            <div>
+              <h2>Project Gallery</h2>
+              <p>Tap any preview to open a larger view of the prototype screens and practice builds.</p>
+            </div>
           </div>
 
-          <div class="mt-8 grid gap-8">
-            <article class="reveal-item">
-              <h3 class="text-2xl font-extrabold text-brand">Asukal Check</h3>
-              <div class="mt-4 grid gap-5 md:grid-cols-3">
-                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/asukal-dashboard.png" data-title="Asukal Check - Dashboard" data-caption="Quick overview of current blood sugar status, recent readings, and average results.">
-                  <span class="image-frame block aspect-[9/13]"><img src="assets/asukal-dashboard.png" alt="Asukal Check dashboard screen" /></span>
-                  <strong class="mt-3 block">Dashboard</strong>
+          <div class="gallery-board">
+            <article class="gallery-project gallery-project-phone reveal-item">
+              <div class="gallery-project-header">
+                <span class="gallery-number">01</span>
+                <div class="gallery-project-info">
+                  <p class="project-type">Mobile app prototype</p>
+                  <h3>Asukal Check</h3>
+                  <span class="project-label">Team Project</span>
+                  <details class="project-details">
+                    <summary>See details</summary>
+                    <div class="project-details-body">
+                      <p class="project-description">Asukal Check is an interactive mobile health prototype focused on making blood sugar tracking feel simple, calm, and readable. The flow helps a user log readings, review weekly glucose trends, and receive practical lifestyle tips without overwhelming them with too much medical-looking information at once.</p>
+                      <p class="project-made">Made with: Figma, HTML, CSS, JavaScript</p>
+                      <div class="project-tags" aria-label="Asukal Check tags">
+                        <span>Blood Sugar Tracking</span>
+                        <span>Health Habits</span>
+                        <span>Lifestyle Guidance</span>
+                      </div>
+                      <ul class="project-points">
+                        <li>Dashboard screen for current status, recent readings, and a seven-day average.</li>
+                        <li>Trends, Tips, and Profile routes that make the prototype feel like a real mobile app flow.</li>
+                        <li>Localized guidance about meals, walking after eating, and checkup reminders.</li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <div class="gallery-mosaic gallery-mosaic-phone">
+                <button class="screenshot-trigger gallery-shot gallery-shot-phone gallery-shot-left" type="button" data-full="assets/asukal-trends-clean.png" data-title="Asukal Check - Trends" data-caption="Weekly chart for spotting glucose patterns and possible blood sugar spikes.">
+                  <span class="image-frame"><img src="assets/asukal-trends-clean.png" alt="Asukal Check trends screen" /></span>
+                  <strong>Trends</strong>
+                  <small>Weekly pattern view</small>
                 </button>
-                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/asukal-trends-clean.png" data-title="Asukal Check - Trends" data-caption="Weekly chart for spotting glucose patterns and possible blood sugar spikes.">
-                  <span class="image-frame block aspect-[9/13]"><img src="assets/asukal-trends-clean.png" alt="Asukal Check trends screen" /></span>
-                  <strong class="mt-3 block">Trends</strong>
+                <button class="screenshot-trigger gallery-shot gallery-shot-phone gallery-shot-main" type="button" data-full="assets/asukal-dashboard.png" data-title="Asukal Check - Dashboard" data-caption="Quick overview of current blood sugar status, recent readings, and average results.">
+                  <span class="image-frame"><img src="assets/asukal-dashboard.png" alt="Asukal Check dashboard screen" /></span>
+                  <strong>Dashboard</strong>
+                  <small>Latest status and readings</small>
                 </button>
-                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/asukal-tips-clean.png" data-title="Asukal Check - Tips" data-caption="Friendly lifestyle guidance about meals, walking, checkups, and daily habits.">
-                  <span class="image-frame block aspect-[9/13]"><img src="assets/asukal-tips-clean.png" alt="Asukal Check tips and knowledge screen" /></span>
-                  <strong class="mt-3 block">Tips</strong>
+                <button class="screenshot-trigger gallery-shot gallery-shot-phone gallery-shot-right" type="button" data-full="assets/asukal-tips-clean.png" data-title="Asukal Check - Tips" data-caption="Friendly lifestyle guidance about meals, walking, checkups, and daily habits.">
+                  <span class="image-frame"><img src="assets/asukal-tips-clean.png" alt="Asukal Check tips and knowledge screen" /></span>
+                  <strong>Tips</strong>
+                  <small>Helpful daily guidance</small>
                 </button>
               </div>
             </article>
 
-            <article class="reveal-item">
-              <h3 class="text-2xl font-extrabold text-brand">StudyBase</h3>
-              <div class="mt-4 grid gap-5 md:grid-cols-3">
-                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/studybase-dashboard-light.jpeg" data-title="StudyBase - Student dashboard" data-caption="Overview cards for deadlines, daily classes, budget status, savings, GPA, and transactions.">
-                  <span class="image-frame block aspect-[4/3]"><img src="assets/studybase-dashboard-light.jpeg" alt="StudyBase light dashboard screen" /></span>
-                  <strong class="mt-3 block">Student dashboard</strong>
+            <article class="gallery-project reveal-item">
+              <div class="gallery-project-header">
+                <span class="gallery-number">02</span>
+                <div class="gallery-project-info">
+                  <p class="project-type">Student dashboard prototype</p>
+                  <h3>StudyBase</h3>
+                  <span class="project-label">By John Rolly A. Calipusan</span>
+                  <details class="project-details">
+                    <summary>See details</summary>
+                    <div class="project-details-body">
+                      <p class="project-description">StudyBase is a student productivity prototype designed as a central hub for everyday academic life. It combines class schedules, assignment deadlines, finance tracking, savings, grades, and study planning into one dashboard so students can quickly understand what needs attention.</p>
+                      <p class="project-made">Made with: Figma, HTML, CSS, JavaScript</p>
+                      <div class="project-tags" aria-label="StudyBase tags">
+                        <span>Academic Planning</span>
+                        <span>Budget Tracking</span>
+                        <span>Grade Overview</span>
+                      </div>
+                      <ul class="project-points">
+                        <li>Dashboard cards summarize due tasks, classes today, budget left, savings, and overall GPA.</li>
+                        <li>Planner views organize coursework into due dates, priority tags, and assignment groups.</li>
+                        <li>Finance screens help track income, spending categories, and student budget status.</li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <div class="gallery-mosaic gallery-mosaic-web">
+                <button class="screenshot-trigger gallery-shot" type="button" data-full="assets/studybase-dashboard-light.jpeg" data-title="StudyBase - Student dashboard" data-caption="Overview cards for deadlines, daily classes, budget status, savings, GPA, and transactions.">
+                  <span class="image-frame"><img src="assets/studybase-dashboard-light.jpeg" alt="StudyBase light dashboard screen" /></span>
+                  <strong>Student dashboard</strong>
+                  <small>At-a-glance school hub</small>
                 </button>
-                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/studybase-planner.jpeg" data-title="StudyBase - Planner" data-caption="Assignment groups, priority tags, and due-date sections for keeping class work organized.">
-                  <span class="image-frame block aspect-[4/3]"><img src="assets/studybase-planner.jpeg" alt="StudyBase planner assignments screen" /></span>
-                  <strong class="mt-3 block">Planner</strong>
+                <button class="screenshot-trigger gallery-shot" type="button" data-full="assets/studybase-planner.jpeg" data-title="StudyBase - Planner" data-caption="Assignment groups, priority tags, and due-date sections for keeping class work organized.">
+                  <span class="image-frame"><img src="assets/studybase-planner.jpeg" alt="StudyBase planner assignments screen" /></span>
+                  <strong>Planner</strong>
+                  <small>Tasks and deadlines</small>
                 </button>
-                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/studybase-finance.jpeg" data-title="StudyBase - Finance" data-caption="Budget summaries, spending categories, and income-versus-expense visuals for student money tracking.">
-                  <span class="image-frame block aspect-[4/3]"><img src="assets/studybase-finance.jpeg" alt="StudyBase finance overview screen" /></span>
-                  <strong class="mt-3 block">Finance</strong>
+                <button class="screenshot-trigger gallery-shot" type="button" data-full="assets/studybase-finance.jpeg" data-title="StudyBase - Finance" data-caption="Budget summaries, spending categories, and income-versus-expense visuals for student money tracking.">
+                  <span class="image-frame"><img src="assets/studybase-finance.jpeg" alt="StudyBase finance overview screen" /></span>
+                  <strong>Finance</strong>
+                  <small>Budget overview</small>
+                </button>
+                <button class="screenshot-trigger gallery-shot" type="button" data-full="assets/studybase-calendar.jpeg" data-title="StudyBase - Calendar" data-caption="Monthly calendar with class, deadline, and transaction markers plus a selected-day panel.">
+                  <span class="image-frame"><img src="assets/studybase-calendar.jpeg" alt="StudyBase calendar screen" /></span>
+                  <strong>Calendar</strong>
+                  <small>Monthly schedule view</small>
                 </button>
               </div>
             </article>
 
-            <article class="reveal-item">
-              <h3 class="text-2xl font-extrabold text-brand">File Vault</h3>
-              <div class="mt-4 grid gap-5 md:grid-cols-2">
-                <button class="screenshot-trigger content-card lift-card p-3 text-left" type="button" data-full="assets/file-vault-preview.jpeg" data-title="File Vault - File search" data-caption="Upload multiple documents, search filenames, and browse saved PDF resources in one simple vault.">
-                  <span class="image-frame block aspect-video"><img src="assets/file-vault-preview.jpeg" alt="File Vault upload and file search screen" /></span>
-                  <strong class="mt-3 block">File search</strong>
+            <article class="gallery-project reveal-item">
+              <div class="gallery-project-header">
+                <span class="gallery-number">03</span>
+                <div class="gallery-project-info">
+                  <p class="project-type">Web utility project</p>
+                  <h3>File Vault</h3>
+                  <span class="project-label">By James Enrico Anore</span>
+                  <details class="project-details">
+                    <summary>See details</summary>
+                    <div class="project-details-body">
+                      <p class="project-description">File Vault is a straightforward web utility for collecting and browsing document resources. The project focuses on a simple upload flow, visible file cards, and search behavior that helps users find saved PDF files without digging through folders manually.</p>
+                      <p class="project-made">Made with: HTML, CSS, JavaScript</p>
+                      <div class="project-tags" aria-label="File Vault tags">
+                        <span>Document Vault</span>
+                        <span>File Search</span>
+                        <span>Resource Library</span>
+                      </div>
+                      <ul class="project-points">
+                        <li>Multiple document upload flow for keeping school resources in one place.</li>
+                        <li>Search input filters filenames so users can quickly find the right file.</li>
+                        <li>Preview layout keeps uploaded PDFs readable, organized, and easy to scan.</li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <div class="gallery-mosaic gallery-mosaic-single">
+                <button class="screenshot-trigger gallery-shot gallery-shot-wide" type="button" data-full="assets/file-vault-preview.jpeg" data-title="File Vault - File search" data-caption="Upload multiple documents, search filenames, and browse saved PDF resources in one simple vault.">
+                  <span class="image-frame"><img src="assets/file-vault-preview.jpeg" alt="File Vault upload and file search screen" /></span>
+                  <strong>File search</strong>
+                  <small>Upload, filter, and browse files</small>
                 </button>
               </div>
             </article>
