@@ -56,25 +56,6 @@ function setupMotionEffects() {
     });
   }
 
-  document.querySelectorAll(".roadmap-card").forEach((card) => {
-    card.addEventListener("pointermove", (event) => {
-      const rect = card.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width;
-      const y = (event.clientY - rect.top) / rect.height;
-
-      card.style.setProperty("--mx", `${x * 100}%`);
-      card.style.setProperty("--my", `${y * 100}%`);
-      card.style.setProperty("--rx", `${(0.5 - y) * 7}deg`);
-      card.style.setProperty("--ry", `${(x - 0.5) * 8}deg`);
-    });
-
-    card.addEventListener("pointerleave", () => {
-      card.style.setProperty("--mx", "50%");
-      card.style.setProperty("--my", "20%");
-      card.style.setProperty("--rx", "0deg");
-      card.style.setProperty("--ry", "0deg");
-    });
-  });
 }
 
 function showToast(message) {
