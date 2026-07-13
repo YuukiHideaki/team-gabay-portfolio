@@ -1505,70 +1505,48 @@ textarea:focus-visible,
     radial-gradient(circle at 20% 0%, rgba(15, 79, 184, 0.12), transparent 34%);
   padding: 2.25rem 1rem 1rem;
   box-shadow: 0 16px 36px rgba(8, 31, 56, 0.08);
-  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background-position 500ms ease;
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease, background 240ms ease;
 }
 
-.roadmap-item > div::before,
-.roadmap-item > div::after {
+.roadmap-item > div::before {
   content: "";
   position: absolute;
   pointer-events: none;
 }
 
 .roadmap-item > div::before {
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.62) 42%, transparent 62%);
-  opacity: 0;
-  transform: translateX(-115%);
-}
-
-.roadmap-item > div::after {
-  inset: auto 1rem 0.8rem 1rem;
-  height: 0.22rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.28rem;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--blue), var(--green), #d38b10);
-  opacity: 0;
-  transform: scaleX(0.2);
+  opacity: 0.36;
+  transform: scaleX(0.42);
   transform-origin: left;
-  transition: opacity 260ms ease, transform 360ms ease;
+  transition: opacity 240ms ease, transform 280ms ease;
 }
 
 .roadmap-item > div h3,
 .roadmap-item > div p {
   position: relative;
   z-index: 1;
-  transition: transform 260ms ease;
 }
 
 .roadmap-item > div:hover,
 .roadmap-item > div:focus-within {
-  animation: none;
   border-color: rgba(15, 79, 184, 0.32);
   background:
     linear-gradient(150deg, rgba(255, 255, 255, 0.98), rgba(231, 244, 255, 0.82)),
     radial-gradient(circle at 20% 0%, rgba(15, 79, 184, 0.15), transparent 34%);
-  transform: translateY(-7px) scale(1.015);
-  box-shadow: 0 24px 48px rgba(8, 31, 56, 0.14), 0 0 0 0.25rem rgba(15, 79, 184, 0.06);
+  transform: translateY(-5px);
+  box-shadow: 0 22px 42px rgba(8, 31, 56, 0.12);
 }
 
 .roadmap-item > div:hover::before,
 .roadmap-item > div:focus-within::before {
-  animation: roadmapCardSheen 780ms ease both;
-  opacity: 1;
-}
-
-.roadmap-item > div:hover::after,
-.roadmap-item > div:focus-within::after {
-  opacity: 0.72;
+  opacity: 0.88;
   transform: scaleX(1);
-}
-
-.roadmap-item > div:hover h3,
-.roadmap-item > div:focus-within h3,
-.roadmap-item > div:hover p,
-.roadmap-item > div:focus-within p {
-  transform: translateY(-3px);
 }
 
 .roadmap-item:hover .roadmap-dot {
@@ -1581,7 +1559,7 @@ textarea:focus-visible,
 }
 
 .roadmap-item.visible > div {
-  animation: roadmapCardArrive 720ms cubic-bezier(0.2, 0.8, 0.2, 1) both, roadmapCardGlow 5.2s ease-in-out 1.2s infinite;
+  animation: roadmapCardArrive 680ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .roadmap-item:nth-child(2).visible .roadmap-dot,
@@ -1935,30 +1913,11 @@ textarea:focus-visible,
 @keyframes roadmapCardArrive {
   from {
     opacity: 0;
-    transform: translateY(18px) scale(0.96);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes roadmapCardGlow {
-  0%,
-  100% {
-    box-shadow: 0 16px 36px rgba(8, 31, 56, 0.08);
-  }
-  50% {
-    box-shadow: 0 18px 40px rgba(15, 79, 184, 0.12);
-  }
-}
-
-@keyframes roadmapCardSheen {
-  from {
-    transform: translateX(-115%);
-  }
-  to {
-    transform: translateX(115%);
   }
 }
 
@@ -2146,9 +2105,7 @@ textarea:focus-visible,
     animation: none !important;
   }
 
-  .roadmap-item.visible > div,
-  .roadmap-item > div:hover::before,
-  .roadmap-item > div:focus-within::before {
+  .roadmap-item.visible > div {
     animation: none !important;
   }
 
