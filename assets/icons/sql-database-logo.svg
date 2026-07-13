@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SQL database logo">
-  <ellipse cx="32" cy="13" rx="22" ry="9" fill="#12aeea"/>
-  <path fill="#12aeea" d="M10 13v13c0 5 9.8 9 22 9s22-4 22-9V13c0 5-9.8 9-22 9s-22-4-22-9Z"/>
-  <path fill="#0d9bd5" d="M10 29v12c0 5 9.8 9 22 9s22-4 22-9V29c0 5-9.8 9-22 9s-22-4-22-9Z"/>
-  <path fill="#0a8bc2" d="M10 44v7c0 5 9.8 9 22 9s22-4 22-9v-7c0 5-9.8 9-22 9s-22-4-22-9Z"/>
-  <path fill="#ffffff" d="M19.5 25.3c3.4 1.7 7.8 2.6 12.5 2.6s9.1-.9 12.5-2.6v3.1C41 30 36.7 30.9 32 30.9s-9-.9-12.5-2.5v-3.1Zm0 15c3.4 1.7 7.8 2.6 12.5 2.6s9.1-.9 12.5-2.6v3.1C41 45 36.7 45.9 32 45.9s-9-.9-12.5-2.5v-3.1Z" opacity=".55"/>
-</svg>

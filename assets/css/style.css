@@ -231,8 +231,7 @@ body:not([data-page="home"])::after {
 }
 
 .button-primary,
-.button-secondary,
-.button-soft {
+.button-secondary {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -276,8 +275,7 @@ body:not([data-page="home"])::after {
 }
 
 .button-primary:active,
-.button-secondary:active,
-.button-soft:active {
+.button-secondary:active {
   transform: translateY(0) scale(0.98);
 }
 
@@ -292,28 +290,15 @@ body:not([data-page="home"])::after {
   transform: translateY(-2px);
 }
 
-.button-soft {
-  color: var(--green);
-}
-
-.button-soft svg,
-.project-link svg,
 .button-primary svg,
 .button-secondary svg {
   transform-origin: center;
   transition: transform 180ms ease;
 }
 
-.button-soft:hover svg,
-.project-link:hover svg,
 .button-primary:hover svg,
 .button-secondary:hover svg {
   transform: translateX(4px);
-}
-
-.project-link {
-  min-height: 2.875rem;
-  padding-block: 0.35rem;
 }
 
 .projects-hero {
@@ -1188,137 +1173,6 @@ textarea:focus-visible,
   transform: translateY(-8px);
 }
 
-.preview-card {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.preview-visual {
-  min-height: 8.5rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  border: 1px solid #d6e0ea;
-  background: linear-gradient(135deg, #eef6ff, #ffffff 52%, #edf9f2);
-}
-
-.team-preview {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: stretch;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.team-card-stack {
-  display: flex;
-  align-items: center;
-  min-width: 0;
-}
-
-.team-profile-card {
-  display: grid;
-  min-width: 8.5rem;
-  min-height: 6.4rem;
-  align-content: center;
-  gap: 0.22rem;
-  border: 1px solid rgba(15, 79, 184, 0.14);
-  border-radius: 0.65rem;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 0.9rem;
-  color: var(--ink);
-  box-shadow: 0 16px 30px rgba(8, 31, 56, 0.1);
-  animation: cardBreathe 5.2s ease-in-out infinite;
-}
-
-.team-profile-card.lead {
-  z-index: 2;
-  background: var(--blue);
-  color: #ffffff;
-}
-
-.team-profile-card:nth-child(2) {
-  margin-left: -1.2rem;
-  transform: translateY(0.7rem);
-  animation-delay: 0.8s;
-}
-
-.team-profile-card span {
-  font-size: 1.65rem;
-  font-weight: 950;
-}
-
-.team-profile-card strong {
-  font-size: 0.8rem;
-  font-weight: 950;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.team-profile-card small {
-  color: currentColor;
-  font-size: 0.75rem;
-  font-weight: 700;
-  opacity: 0.72;
-}
-
-.team-preview-panel {
-  display: grid;
-  align-content: center;
-  gap: 0.45rem;
-  min-width: 7.5rem;
-}
-
-.team-preview-panel span {
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.88);
-  padding: 0.38rem 0.7rem;
-  color: var(--blue);
-  font-size: 0.76rem;
-  font-weight: 900;
-  box-shadow: 0 8px 18px rgba(8, 31, 56, 0.08);
-}
-
-.project-preview {
-  display: grid;
-  align-content: center;
-  gap: 0.75rem;
-  padding: 1.15rem;
-}
-
-.project-preview span {
-  display: grid;
-  gap: 0.15rem;
-  border-radius: 0.45rem;
-  background: #ffffff;
-  padding: 0.65rem 0.85rem;
-  color: var(--ink);
-  box-shadow: 0 8px 18px rgba(8, 31, 56, 0.08);
-  transform-origin: left center;
-  animation: projectTease 6s ease-in-out infinite;
-}
-
-.project-preview strong {
-  font-size: 0.92rem;
-  font-weight: 900;
-}
-
-.project-preview small {
-  color: var(--muted);
-  font-size: 0.76rem;
-  font-weight: 700;
-}
-
-.project-preview span:nth-child(2) {
-  margin-left: 1.5rem;
-  animation-delay: 0.8s;
-}
-
-.project-preview span:nth-child(3) {
-  margin-left: 3rem;
-  animation-delay: 1.6s;
-}
-
 .section-label {
   border-left: 4px solid var(--blue);
   padding-left: 1rem;
@@ -1496,10 +1350,6 @@ textarea:focus-visible,
   object-fit: contain;
 }
 
-.code-icon img[src*="c-language-logo"] {
-  filter: none;
-}
-
 .html-icon {
   background: #fff1e9;
   color: #d4561d;
@@ -1654,7 +1504,6 @@ textarea:focus-visible,
   line-height: 1.65;
 }
 
-.contact-info svg,
 .content-card svg,
 .skill-tile strong {
   transition: transform 220ms ease, color 180ms ease;
@@ -1758,16 +1607,6 @@ textarea:focus-visible,
   background: #eef3f8;
 }
 
-@keyframes floatMark {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
 @keyframes codeMarkPulse {
   0%,
   100% {
@@ -1783,16 +1622,6 @@ textarea:focus-visible,
   }
 }
 
-@keyframes chipFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
 @keyframes cursorBlink {
   0%,
   45% {
@@ -1801,26 +1630,6 @@ textarea:focus-visible,
   46%,
   100% {
     opacity: 0;
-  }
-}
-
-@keyframes projectTease {
-  0%,
-  100% {
-    transform: translateX(0) scale(1);
-  }
-  50% {
-    transform: translateX(8px) scale(1.02);
-  }
-}
-
-@keyframes cardBreathe {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-5px) scale(1.015);
   }
 }
 
@@ -2148,10 +1957,8 @@ textarea:focus-visible,
   .lightbox-panel,
   .content-card:hover svg,
   .typing-cursor,
-  .project-preview span,
   .mock-card-block,
   .typing-line,
-  .team-profile-card,
   .roadmap-dot {
     animation: none !important;
   }
