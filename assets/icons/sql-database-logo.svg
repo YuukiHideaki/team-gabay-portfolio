@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SQL database logo">
-  <ellipse cx="32" cy="14" rx="20" ry="8" fill="#0F8F7B"/>
-  <path fill="#11B59B" d="M12 14v24c0 4.4 9 8 20 8s20-3.6 20-8V14c0 4.4-9 8-20 8s-20-3.6-20-8Z"/>
-  <path fill="#0B6E60" d="M12 26c0 4.4 9 8 20 8s20-3.6 20-8v6c0 4.4-9 8-20 8s-20-3.6-20-8v-6Z" opacity=".55"/>
-  <ellipse cx="32" cy="38" rx="20" ry="8" fill="#0F8F7B"/>
-  <text x="32" y="42" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="900" fill="#fff">SQL</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SQL query icon">
+  <rect x="8" y="10" width="48" height="44" rx="10" fill="#0E7490"/>
+  <rect x="13" y="16" width="38" height="32" rx="5" fill="#ECFEFF"/>
+  <path fill="#0891B2" d="M18 24h13v4H18v-4Zm0 8h22v4H18v-4Zm0 8h15v4H18v-4Z"/>
+  <path fill="#0F766E" d="M39.8 28.2 47.6 32l-7.8 3.8-1.8-3.1 2.8-1.1-2.8-1.2 1.8-3.2Z"/>
+  <path fill="#164E63" d="m34.3 42 5-20h3.9l-5 20h-3.9Z"/>
 </svg>
