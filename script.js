@@ -380,6 +380,7 @@ function setupLightbox() {
   let lastTrigger = null;
 
   if (!lightbox || !lightboxImage || !lightboxTitle || !lightboxCaption) return;
+  document.body.append(lightbox);
 
   document.querySelectorAll(".screenshot-trigger").forEach((button) => {
     button.addEventListener("click", () => {
@@ -394,6 +395,7 @@ function setupLightbox() {
       panel?.scrollTo({ top: 0, left: 0 });
       lightboxImage.addEventListener("load", () => panel?.scrollTo({ top: 0, left: 0 }), { once: true });
       document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
       document.body.classList.add("modal-open");
       lightbox.querySelector("[data-lightbox-close]")?.focus({ preventScroll: true });
     });
@@ -402,6 +404,7 @@ function setupLightbox() {
   function closeLightbox() {
     lightbox.hidden = true;
     document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
     document.body.classList.remove("modal-open");
     lastTrigger?.focus();
   }
