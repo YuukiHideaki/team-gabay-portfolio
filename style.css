@@ -1083,6 +1083,11 @@ textarea:focus-visible,
   text-transform: uppercase;
 }
 
+.about-hero .about-eyebrow {
+  color: var(--green);
+  letter-spacing: 0;
+}
+
 .about-hero h1,
 .contact-intro h1 {
   margin-top: 0.65rem;
@@ -1348,6 +1353,12 @@ textarea:focus-visible,
   width: 1.55rem;
   height: 1.55rem;
   object-fit: contain;
+}
+
+.skill-icon.c-icon img,
+.sql-icon img {
+  width: 1.72rem;
+  height: 1.72rem;
 }
 
 .html-icon {
