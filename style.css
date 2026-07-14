@@ -1381,6 +1381,11 @@ textarea:focus-visible,
   color: #0e7490;
 }
 
+.bs-icon {
+  background: #f1e8ff;
+  color: #7952b3;
+}
+
 .py-icon {
   background: #edf5ff;
   color: #245aa7;
