@@ -1,9 +1,11 @@
+// Shared page behavior for navigation, motion effects, galleries, and the contact form.
 const pageName = document.body.dataset.page;
 const menuButton = document.getElementById("menuButton");
 const mobileMenu = document.getElementById("mobileMenu");
 const toast = document.getElementById("toast");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+// Adds a soft fade when moving between local HTML pages.
 function setupPageTransitions() {
   document.body.classList.add("page-ready");
 
@@ -35,6 +37,7 @@ function setupPageTransitions() {
   });
 }
 
+// Tilts the home-page device mockup based on pointer position.
 function setupMotionEffects() {
   if (reduceMotion) return;
 
@@ -57,6 +60,7 @@ function setupMotionEffects() {
   }
 }
 
+// Shows a short status message near the bottom of the page.
 function showToast(message) {
   if (!toast) return;
 
@@ -68,6 +72,7 @@ function showToast(message) {
   }, 2800);
 }
 
+// Opens and closes the mobile navigation menu.
 function setupMobileMenu() {
   if (!menuButton || !mobileMenu) return;
 
@@ -86,12 +91,14 @@ function setupMobileMenu() {
   });
 }
 
+// Marks the matching desktop navigation link for the current page.
 function setupActiveLinks() {
   document.querySelectorAll("[data-nav]").forEach((link) => {
     link.classList.toggle("active", link.dataset.nav === pageName);
   });
 }
 
+// Reveals sections as they enter the viewport.
 function setupRevealAnimations() {
   const items = document.querySelectorAll(".section-reveal, .reveal-item");
 
@@ -117,6 +124,7 @@ function setupRevealAnimations() {
   });
 }
 
+// Rotates the philosophy cards on the home page.
 function setupRotatingCards() {
   if (reduceMotion) return;
 
@@ -132,6 +140,7 @@ function setupRotatingCards() {
   }, 2400);
 }
 
+// Types and deletes the rotating hero phrases.
 function setupTypewriterText() {
   const typewriter = document.querySelector("[data-typewriter]");
   const textTarget = document.querySelector("[data-typewriter-text]");
@@ -179,6 +188,7 @@ function setupTypewriterText() {
   typeNextLetter();
 }
 
+// Controls the featured-project carousel, including dots, arrows, autoplay, and dragging.
 function setupProjectSlider() {
   const slider = document.querySelector("[data-project-slider]");
   if (!slider) return;
@@ -200,6 +210,7 @@ function setupProjectSlider() {
   track.append(firstClone);
   track.prepend(lastClone);
 
+  // Cloned end slides create a smooth looping carousel.
   const allSlides = Array.from(track.querySelectorAll(".project-slide"));
   let currentIndex = 0;
   let positionIndex = 1;
@@ -336,6 +347,7 @@ function setupProjectSlider() {
   function finishDrag() {
     if (!isDragging) return;
 
+    // Change slides only after a deliberate swipe distance.
     const shouldChangeSlide = Math.abs(dragOffset) > getSlideStep() * 0.18;
 
     slider.classList.remove("dragging");
@@ -371,6 +383,7 @@ function setupProjectSlider() {
   startAutoSlide();
 }
 
+// Opens project screenshots in a centered preview modal.
 function setupLightbox() {
   const lightbox = document.getElementById("imageLightbox");
   const lightboxImage = document.getElementById("lightboxImage");
@@ -418,6 +431,7 @@ function setupLightbox() {
   });
 }
 
+// Validates the demo contact form before showing the success message.
 function setupContactForm() {
   const form = document.getElementById("contactForm");
   if (!form) return;
@@ -476,6 +490,7 @@ function setupContactForm() {
   });
 }
 
+// Initialize only the features that exist on the current page.
 setupMobileMenu();
 setupPageTransitions();
 setupMotionEffects();

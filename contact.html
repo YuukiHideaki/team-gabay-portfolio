@@ -7,12 +7,25 @@
     <title>Contact - Team Gabay Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = { theme: { extend: { colors: { ink: "#071326", muted: "#5d6b7a", brand: "#0f4fb8", leaf: "#12824c" } } } };
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#071326",
+              muted: "#5d6b7a",
+              brand: "#0f4fb8",
+              leaf: "#12824c",
+            },
+          },
+        },
+      };
     </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body data-page="contact">
     <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Shared site navigation for desktop and mobile screens. -->
     <header class="site-header">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main navigation">
         <a class="text-2xl font-extrabold tracking-tight text-brand" href="index.html">Team Gabay</a>
@@ -37,6 +50,7 @@
     </header>
 
     <main id="main">
+      <!-- Contact section pairs direct links with the demo validation form. -->
       <section class="contact-section mx-auto grid max-w-6xl gap-12 px-5 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div class="section-reveal contact-intro">
           <p>Contact Team Gabay</p>
@@ -65,6 +79,7 @@
           </div>
         </div>
 
+        <!-- Demo form is validated in script.js before showing a toast message. -->
         <form class="content-card section-reveal p-6 md:p-8" id="contactForm" novalidate>
           <div class="grid gap-5">
             <div>

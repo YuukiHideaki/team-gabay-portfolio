@@ -1,3 +1,4 @@
+/* Design tokens shared by the whole site. */
 :root {
   --blue: #0f4fb8;
   --blue-dark: #08306f;
@@ -94,6 +95,7 @@ body:not([data-page="home"])::after {
   opacity: 0.76;
 }
 
+/* Browser view transitions support the page fade effect in script.js. */
 @view-transition {
   navigation: auto;
 }
@@ -128,6 +130,7 @@ body:not([data-page="home"])::after {
   min-height: 100vh;
 }
 
+/* Shared header, desktop navigation, and mobile menu styles. */
 .site-header {
   position: sticky;
   top: 0;
@@ -230,6 +233,7 @@ body:not([data-page="home"])::after {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Reusable button styles used across links, forms, and modal controls. */
 .button-primary,
 .button-secondary {
   position: relative;
@@ -301,6 +305,7 @@ body:not([data-page="home"])::after {
   transform: translateX(4px);
 }
 
+/* Projects page hero and featured carousel. */
 .projects-hero {
   position: relative;
 }
@@ -606,6 +611,7 @@ body:not([data-page="home"])::after {
   right: 1rem;
 }
 
+/* Accessible focus rings for keyboard users. */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -616,6 +622,7 @@ textarea:focus-visible,
   box-shadow: 0 0 0 6px rgba(15, 79, 184, 0.1);
 }
 
+/* Shared cards, image frames, and hover lift effects. */
 .content-card {
   position: relative;
   isolation: isolate;
@@ -670,6 +677,7 @@ textarea:focus-visible,
   transform: scale(1.045);
 }
 
+/* Project gallery layout and screenshot preview cards. */
 .gallery-section {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(245, 250, 255, 0.92)),
@@ -950,6 +958,7 @@ textarea:focus-visible,
   z-index: 2;
 }
 
+/* Scroll-reveal and home-page motion elements. */
 .section-reveal,
 .reveal-item {
   opacity: 0;
@@ -1069,6 +1078,7 @@ textarea:focus-visible,
   animation-delay: 0.5s;
 }
 
+/* About page profile, skills, and roadmap sections. */
 .about-hero,
 .contact-intro {
   position: relative;
@@ -1585,6 +1595,7 @@ textarea:focus-visible,
   animation: iconPop 420ms ease both;
 }
 
+/* Contact form fields, validation text, and toast message. */
 .form-field {
   width: 100%;
   border: 1px solid #c9d5e2;
@@ -1643,6 +1654,7 @@ textarea:focus-visible,
   transform: translateY(0);
 }
 
+/* Lightbox modal for enlarged project screenshots. */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -1679,6 +1691,7 @@ textarea:focus-visible,
   background: #eef3f8;
 }
 
+/* Animation keyframes used by page transitions and microinteractions. */
 @keyframes codeMarkPulse {
   0%,
   100% {
@@ -1895,6 +1908,7 @@ textarea:focus-visible,
   }
 }
 
+/* Responsive layout adjustments for galleries, carousel, and roadmap. */
 @media (min-width: 768px) {
   .gallery-mosaic-phone {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2035,6 +2049,7 @@ textarea:focus-visible,
   }
 }
 
+/* Keep content usable for visitors who prefer reduced motion. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
