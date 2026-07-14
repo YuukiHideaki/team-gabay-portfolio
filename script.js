@@ -1,11 +1,11 @@
-// Shared page behavior for navigation, motion effects, galleries, and the contact form.
+// Shared JavaScript for the menu, page motion, gallery previews, and contact form.
 const pageName = document.body.dataset.page;
 const menuButton = document.getElementById("menuButton");
 const mobileMenu = document.getElementById("mobileMenu");
 const toast = document.getElementById("toast");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// Adds a soft fade when moving between local HTML pages.
+// Adds a short fade before moving to another page in this same site.
 function setupPageTransitions() {
   document.body.classList.add("page-ready");
 
@@ -37,7 +37,7 @@ function setupPageTransitions() {
   });
 }
 
-// Tilts the home-page device mockup based on pointer position.
+// Makes the home-page device mockup gently tilt with the cursor.
 function setupMotionEffects() {
   if (reduceMotion) return;
 
@@ -60,7 +60,7 @@ function setupMotionEffects() {
   }
 }
 
-// Shows a short status message near the bottom of the page.
+// Shows a short message near the bottom of the page.
 function showToast(message) {
   if (!toast) return;
 
@@ -72,7 +72,7 @@ function showToast(message) {
   }, 2800);
 }
 
-// Opens and closes the mobile navigation menu.
+// Opens the mobile menu and closes it when the user clicks outside.
 function setupMobileMenu() {
   if (!menuButton || !mobileMenu) return;
 
@@ -91,14 +91,14 @@ function setupMobileMenu() {
   });
 }
 
-// Marks the matching desktop navigation link for the current page.
+// Highlights the desktop nav link that matches the current page.
 function setupActiveLinks() {
   document.querySelectorAll("[data-nav]").forEach((link) => {
     link.classList.toggle("active", link.dataset.nav === pageName);
   });
 }
 
-// Reveals sections as they enter the viewport.
+// Reveals hidden sections when they scroll into view.
 function setupRevealAnimations() {
   const items = document.querySelectorAll(".section-reveal, .reveal-item");
 
@@ -124,7 +124,7 @@ function setupRevealAnimations() {
   });
 }
 
-// Rotates the philosophy cards on the home page.
+// Cycles the active design-principle card on the home page.
 function setupRotatingCards() {
   if (reduceMotion) return;
 
@@ -140,7 +140,7 @@ function setupRotatingCards() {
   }, 2400);
 }
 
-// Types and deletes the rotating hero phrases.
+// Types and deletes the rotating text in the home hero.
 function setupTypewriterText() {
   const typewriter = document.querySelector("[data-typewriter]");
   const textTarget = document.querySelector("[data-typewriter-text]");
@@ -188,7 +188,7 @@ function setupTypewriterText() {
   typeNextLetter();
 }
 
-// Controls the featured-project carousel, including dots, arrows, autoplay, and dragging.
+// Runs the project carousel, including arrows, dots, autoplay, and drag gestures.
 function setupProjectSlider() {
   const slider = document.querySelector("[data-project-slider]");
   if (!slider) return;
@@ -210,7 +210,7 @@ function setupProjectSlider() {
   track.append(firstClone);
   track.prepend(lastClone);
 
-  // Cloned end slides create a smooth looping carousel.
+  // Extra first/last slides let the carousel loop without a visible jump.
   const allSlides = Array.from(track.querySelectorAll(".project-slide"));
   let currentIndex = 0;
   let positionIndex = 1;
@@ -347,7 +347,7 @@ function setupProjectSlider() {
   function finishDrag() {
     if (!isDragging) return;
 
-    // Change slides only after a deliberate swipe distance.
+    // Only treat the drag as a slide change after a real swipe.
     const shouldChangeSlide = Math.abs(dragOffset) > getSlideStep() * 0.18;
 
     slider.classList.remove("dragging");
@@ -383,7 +383,7 @@ function setupProjectSlider() {
   startAutoSlide();
 }
 
-// Opens project screenshots in a centered preview modal.
+// Opens project screenshots in the lightbox preview.
 function setupLightbox() {
   const lightbox = document.getElementById("imageLightbox");
   const lightboxImage = document.getElementById("lightboxImage");
@@ -431,7 +431,7 @@ function setupLightbox() {
   });
 }
 
-// Validates the demo contact form before showing the success message.
+// Checks the demo form fields before showing a success message.
 function setupContactForm() {
   const form = document.getElementById("contactForm");
   if (!form) return;
@@ -490,7 +490,7 @@ function setupContactForm() {
   });
 }
 
-// Initialize only the features that exist on the current page.
+// Start each feature; every setup function exits quietly if its page elements are missing.
 setupMobileMenu();
 setupPageTransitions();
 setupMotionEffects();

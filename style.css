@@ -1,4 +1,4 @@
-/* Design tokens shared by the whole site. */
+/* Main colors and reusable values for the whole site. */
 :root {
   --blue: #0f4fb8;
   --blue-dark: #08306f;
@@ -15,6 +15,7 @@
   initial-value: 0px;
 }
 
+/* Basic page reset so spacing and wide elements stay under control. */
 * {
   box-sizing: border-box;
 }
@@ -37,6 +38,7 @@ body {
   transition: opacity 260ms ease, transform 260ms ease, filter 260ms ease;
 }
 
+/* These classes are toggled by script.js for the page fade transition. */
 body.page-ready {
   opacity: 1;
   transform: translateY(0);
@@ -53,6 +55,7 @@ body.modal-open {
   transform: none !important;
 }
 
+/* The two fixed background layers create the moving grid and light sweep. */
 body::before,
 body::after {
   content: "";
@@ -95,7 +98,7 @@ body:not([data-page="home"])::after {
   opacity: 0.76;
 }
 
-/* Browser view transitions support the page fade effect in script.js. */
+/* Native view transitions add a smoother page swap in browsers that support it. */
 @view-transition {
   navigation: auto;
 }
@@ -124,13 +127,14 @@ body:not([data-page="home"])::after {
   top: 1rem;
 }
 
+/* Keeps the visible page content above the fixed background layers. */
 .page-shell {
   position: relative;
   z-index: 1;
   min-height: 100vh;
 }
 
-/* Shared header, desktop navigation, and mobile menu styles. */
+/* Header and navigation styles shared across every page. */
 .site-header {
   position: sticky;
   top: 0;
@@ -159,6 +163,7 @@ body:not([data-page="home"])::after {
   transition: color 180ms ease, transform 180ms ease;
 }
 
+/* Small underline animation for desktop navigation links. */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -207,6 +212,7 @@ body:not([data-page="home"])::after {
   min-height: 2.75rem;
 }
 
+/* The menu button turns into an X when the mobile menu is open. */
 .menu-line {
   display: block;
   width: 1.35rem;
@@ -233,7 +239,7 @@ body:not([data-page="home"])::after {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Reusable button styles used across links, forms, and modal controls. */
+/* Shared button base for links, form actions, and lightbox controls. */
 .button-primary,
 .button-secondary {
   position: relative;
@@ -266,6 +272,7 @@ body:not([data-page="home"])::after {
   transform: translateX(130%);
 }
 
+/* Primary buttons are filled; secondary buttons stay lighter. */
 .button-primary {
   background: var(--blue);
   color: #ffffff;
@@ -305,7 +312,7 @@ body:not([data-page="home"])::after {
   transform: translateX(4px);
 }
 
-/* Projects page hero and featured carousel. */
+/* Projects page intro and carousel area. */
 .projects-hero {
   position: relative;
 }
@@ -361,6 +368,7 @@ body:not([data-page="home"])::after {
   --slide-gap: 0.9rem;
 }
 
+/* Faded side edges make the moving slide track feel contained. */
 .project-slider::before,
 .project-slider::after {
   content: "";
@@ -398,6 +406,7 @@ body:not([data-page="home"])::after {
   transition: none;
 }
 
+/* Each slide fills a fixed responsive width so dragging feels predictable. */
 .project-slide {
   position: relative;
   flex: 0 0 var(--slide-width);
@@ -430,6 +439,7 @@ body:not([data-page="home"])::after {
   pointer-events: none;
 }
 
+/* The Asukal slide uses three phone screenshots instead of one wide image. */
 .asukal-slide {
   background:
     radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.18), transparent 24%),
@@ -464,6 +474,7 @@ body:not([data-page="home"])::after {
     radial-gradient(circle at 50% 18%, rgba(47, 118, 255, 0.16), transparent 32%);
 }
 
+/* Phone screenshots are layered in the center of the first carousel slide. */
 .project-slide .phone-shot {
   position: absolute;
   left: 50%;
@@ -552,6 +563,7 @@ body:not([data-page="home"])::after {
   transform: translateY(-2px);
 }
 
+/* Dots and arrow buttons are controlled by setupProjectSlider() in script.js. */
 .project-slider-dots {
   position: absolute;
   left: 50%;
@@ -611,7 +623,7 @@ body:not([data-page="home"])::after {
   right: 1rem;
 }
 
-/* Accessible focus rings for keyboard users. */
+/* Clear focus rings help keyboard users see where they are on the page. */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -622,7 +634,7 @@ textarea:focus-visible,
   box-shadow: 0 0 0 6px rgba(15, 79, 184, 0.1);
 }
 
-/* Shared cards, image frames, and hover lift effects. */
+/* Reusable card and image styles used by project, team, and contact cards. */
 .content-card {
   position: relative;
   isolation: isolate;
@@ -644,6 +656,7 @@ textarea:focus-visible,
   transition: opacity 220ms ease;
 }
 
+/* Lift cards move slightly on hover to show they are interactive. */
 .lift-card {
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
@@ -843,6 +856,7 @@ textarea:focus-visible,
   margin-top: 0.7rem;
 }
 
+/* Details panels expand the project notes without making the page too long. */
 .project-details summary {
   display: inline-flex;
   align-items: center;
@@ -898,6 +912,7 @@ textarea:focus-visible,
     linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(217, 232, 245, 0.35));
 }
 
+/* Screenshot buttons are styled as cards, then opened by setupLightbox(). */
 .gallery-shot {
   position: relative;
   display: grid;
@@ -958,7 +973,7 @@ textarea:focus-visible,
   z-index: 2;
 }
 
-/* Scroll-reveal and home-page motion elements. */
+/* Elements start hidden and become visible when script.js adds .visible. */
 .section-reveal,
 .reveal-item {
   opacity: 0;
@@ -1008,6 +1023,7 @@ textarea:focus-visible,
   display: inline-block;
 }
 
+/* The cursor and mock lines support the typing-style hero animation. */
 .typing-cursor {
   width: 0.15rem;
   height: 1.35rem;
@@ -1028,6 +1044,7 @@ textarea:focus-visible,
   animation: deviceArrive 760ms cubic-bezier(0.2, 0.8, 0.2, 1) both, deviceFloat 6.5s ease-in-out 900ms infinite;
 }
 
+/* The device mockup floats on its own and tilts when script.js updates the variables. */
 .hero-device:hover {
   box-shadow: 0 30px 68px rgba(8, 31, 56, 0.22);
 }
@@ -1078,7 +1095,7 @@ textarea:focus-visible,
   animation-delay: 0.5s;
 }
 
-/* About page profile, skills, and roadmap sections. */
+/* About and contact hero headings share the same intro treatment. */
 .about-hero,
 .contact-intro {
   position: relative;
@@ -1154,6 +1171,7 @@ textarea:focus-visible,
   line-height: 1;
 }
 
+/* Home-page principle cards are highlighted one at a time by script.js. */
 .principle-card {
   min-height: 15rem;
 }
@@ -1209,6 +1227,7 @@ textarea:focus-visible,
   line-height: 1;
 }
 
+/* Member tags stay on one line and scroll sideways when they need more room. */
 .member-tags {
   display: flex;
   flex-wrap: nowrap;
@@ -1324,6 +1343,7 @@ textarea:focus-visible,
   margin-top: 0.85rem;
 }
 
+/* Skill tiles pair an icon block with the skill name and short description. */
 .skill-tile {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -1418,6 +1438,7 @@ textarea:focus-visible,
   color: var(--blue);
 }
 
+/* Roadmap styles draw the timeline and animate each milestone. */
 .roadmap-section {
   position: relative;
   border-top: 1px solid rgba(15, 79, 184, 0.1);
@@ -1449,6 +1470,7 @@ textarea:focus-visible,
   animation: roadmapLineShimmer 5.8s ease-in-out infinite;
 }
 
+/* The dotted tail makes the roadmap feel like it continues forward. */
 .roadmap-track::after {
   content: "";
   position: absolute;
@@ -1546,6 +1568,7 @@ textarea:focus-visible,
   animation: roadmapCardArrive 680ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
+/* Staggered delays make the roadmap items arrive in order. */
 .roadmap-item:nth-child(2).visible .roadmap-dot,
 .roadmap-item:nth-child(2).visible > div {
   animation-delay: 90ms;
@@ -1691,7 +1714,7 @@ textarea:focus-visible,
   background: #eef3f8;
 }
 
-/* Animation keyframes used by page transitions and microinteractions. */
+/* Animation keyframes for the page fades, hero motion, modal, and roadmap. */
 @keyframes codeMarkPulse {
   0%,
   100% {
@@ -1908,7 +1931,7 @@ textarea:focus-visible,
   }
 }
 
-/* Responsive layout adjustments for galleries, carousel, and roadmap. */
+/* Wider screens get multi-column galleries and the horizontal roadmap. */
 @media (min-width: 768px) {
   .gallery-mosaic-phone {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1995,6 +2018,7 @@ textarea:focus-visible,
     padding-top: 0.5rem;
   }
 
+  /* On mobile, the roadmap changes from a horizontal timeline into a vertical one. */
   .roadmap-track::before {
     left: 1.8rem;
     right: auto;
@@ -2049,7 +2073,7 @@ textarea:focus-visible,
   }
 }
 
-/* Keep content usable for visitors who prefer reduced motion. */
+/* Respect reduced-motion settings by removing animation-heavy effects. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
