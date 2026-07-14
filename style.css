@@ -1498,86 +1498,24 @@ textarea:focus-visible,
   position: relative;
   min-height: 13.6rem;
   overflow: hidden;
-  border: 1px solid rgba(170, 193, 218, 0.82);
-  border-radius: 0.75rem;
-  background:
-    linear-gradient(150deg, rgba(255, 255, 255, 0.96), rgba(238, 247, 255, 0.76)),
-    radial-gradient(circle at 20% 0%, rgba(15, 79, 184, 0.12), transparent 34%);
-  padding: 2.25rem 1rem 1rem 1.25rem;
-  box-shadow: 0 16px 36px rgba(8, 31, 56, 0.08);
-  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease, background 240ms ease;
-}
-
-.roadmap-item > div::before,
-.roadmap-item > div::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-
-.roadmap-item > div::before {
-  left: 0;
-  top: 1rem;
-  bottom: 1rem;
-  width: 0.42rem;
-  border-radius: 0 999px 999px 0;
-  background: linear-gradient(180deg, var(--blue), #28a1df, var(--green));
-  opacity: 0.7;
-  transform: scaleY(0.38);
-  transform-origin: top;
-  transition: opacity 260ms ease, transform 320ms ease, width 260ms ease;
-}
-
-.roadmap-item > div::after {
-  content: attr(data-stage);
-  right: 0.95rem;
-  bottom: 0.85rem;
-  border: 1px solid rgba(15, 79, 184, 0.18);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  padding: 0.22rem 0.48rem;
-  color: var(--blue);
-  font-size: 0.62rem;
-  font-weight: 950;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0;
-  transform: translateY(0.35rem);
-  transition: opacity 220ms ease, transform 220ms ease;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: #ffffff;
+  padding: 2.25rem 1rem 1rem;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .roadmap-item > div h3,
 .roadmap-item > div p {
   position: relative;
   z-index: 1;
-  transform: translateZ(18px);
-}
-
-.roadmap-item > div p {
-  padding-bottom: 1.55rem;
 }
 
 .roadmap-item > div:hover,
 .roadmap-item > div:focus-within {
-  border-color: rgba(15, 79, 184, 0.32);
-  background:
-    linear-gradient(150deg, rgba(255, 255, 255, 0.98), rgba(231, 244, 255, 0.82)),
-    radial-gradient(circle at 20% 0%, rgba(15, 79, 184, 0.15), transparent 34%);
-  transform: translateY(-6px);
-  box-shadow: 0 24px 44px rgba(8, 31, 56, 0.13);
-}
-
-.roadmap-item > div:hover::before,
-.roadmap-item > div:focus-within::before {
-  opacity: 1;
-  width: 0.58rem;
-  transform: scaleY(1);
-}
-
-.roadmap-item > div:hover::after,
-.roadmap-item > div:focus-within::after {
-  opacity: 1;
-  transform: translateY(0);
+  border-color: #aac1da;
+  transform: translateY(-5px) rotate(-0.5deg);
+  box-shadow: 0 12px 24px rgba(8, 31, 56, 0.08);
 }
 
 .roadmap-item:hover .roadmap-dot {

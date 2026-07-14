@@ -55,7 +55,6 @@ function setupMotionEffects() {
       heroDevice.style.setProperty("--tilt-y", "0deg");
     });
   }
-
 }
 
 function showToast(message) {
